@@ -1,0 +1,229 @@
+*,
+body,
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-bg-gradasi: linear-gradient(358deg, rgb(243, 243, 243) 0%, rgba(240, 255, 255, 1) 47%, rgba(255, 233, 233, 1) 69%, rgba(200, 255, 235, 1) 100%);
+  --clr-bg-nav: rgba(17, 17, 17, 0.85);
+  --clr-text-nav: rgb(217, 217, 217);
+  --clr-primary: rgb(243, 243, 243);
+  --clr-secondary: #d6d7d5;
+  --clr-h1-text: #2c394b;
+  --clr-p-text: #082032;
+}
+
+body {
+  position: relative;
+  background-color: var(--clr-primary);
+}
+
+.dark-mode {
+  --clr-primary: #212a3e;
+  --clr-secondary: #1a212e;
+  --clr-bg-gradasi: #212a3e;
+  --clr-h1-text: #1f8a70;
+  --clr-p-text: #967e76;
+}
+
+.navigasi {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+  box-sizing: border-box;
+  background-color: var(--clr-bg-nav);
+
+  .logo {
+    height: 100%;
+    padding: 5px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .logo:hover {
+    animation: shakeLogo 1s ease-out;
+    -webkit-animation: shakeLogo 1s ease-out;
+  }
+
+  .nav-servis {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .ul-servis {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 50px;
+
+      .servis {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: 'Sriracha', cursive;
+        padding: 10px;
+
+        a {
+          text-decoration: none;
+          color: var(--clr-text-nav);
+        }
+      }
+
+      .active {
+        border-bottom: 4px solid rgb(32, 255, 255);
+        border-top: 4px solid rgb(32, 255, 255);
+        text-shadow: 0px 0px 10px rgb(111, 255, 224), 0px 0px 15px rgb(111, 255, 224), 0px 0px 20px rgb(111, 255, 224);
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+      }
+
+      .servis:hover {
+        text-shadow: 0px 0px 5px rgb(0, 172, 135), 0px 0px 15px rgb(0, 172, 135);
+      }
+    }
+
+    .icon-mode {
+      height: 40px;
+      padding: 5px;
+      cursor: pointer;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+// ! bagian animasi navbar
+
+@keyframes shakeLogo {
+  10% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  20% {
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+  }
+}
+
+// ! bagian responsif navbar
+
+@media (max-width: 1020px) {
+  .navigasi {
+    justify-content: space-around;
+    padding-right: 0;
+
+    .nav-servis {
+      .container-servis {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 100vw;
+        right: 0;
+        display: flex;
+        justify-content: end;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+
+        .ul-servis {
+          flex-direction: column;
+          width: 80%;
+          height: 100%;
+          right: 0;
+          top: 0;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(31, 31, 31, 1);
+        }
+      }
+      .nav-slide {
+        left: 0;
+      }
+      .icon-mode {
+        margin-left: 65vw;
+        z-index: 9;
+      }
+    }
+
+    .burger {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      z-index: 9;
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .navigasi {
+    .nav-servis {
+      .icon-mode {
+        margin-left: 40vw;
+      }
+    }
+  }
+}

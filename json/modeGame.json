@@ -1,0 +1,28 @@
+{
+  "modeGame": [
+    {
+      "mode": "Unrated",
+      "deskripsi": " Dalam mode standar Unrated, pertandingan dimainkan dari 25 putaran - tim pertama yang memenangkan 13 putaran memenangkan pertandingan. Tim penyerang memiliki perangkat tipe bom yang disebut Spike. Mereka harus mengirimkandanmengaktifkan Spike di salah satu dari beberapa lokasi yang ditentukan (lokasi bom). Jika tim penyerang berhasil melindungi Spike yang diaktifkan selama 45 detik, Spike akan meledak, menghancurkan segalanya di area tertentu,dan mereka menerima poin."
+    },
+    {
+      "mode": "Spike Rush",
+      "deskripsi": " Dalam mode Spike Rush, pertandingannya dimainkan sebanyak 7 ronde - tim pertama yang memenangkan 4 putaran memenangkan pertandingan. Pemain memulai putaran dengan semua kemampuan terisi penuh kecuali yang pamungkas, yang mengisi daya dua kali lebih cepat dari permainan standar. Semua pemain di tim penyerang membawa spike, tetapi hanya satu spike yang dapat diaktifkan per ronde. Senjata diacak di setiap putaran dan setiap pemain memulai dengan senjata yang sama. Bola titik pamungkas dalam permainan standar ada, tetapi ada beberapa bola power-up sebagai gantinya."
+    },
+    {
+      "mode": "Competitive",
+      "deskripsi": " Pertandingan kompetitif sama dengan pertandingan unrated dengan tambahan sistem peringkat berbasis kemenangan yang memberikan peringkat ke setiap pemain setelah 5 pertandingan dimainkan. Sebelum Anda dapat bermain dalam permainan kompetitif, Anda harus memenangkan 10 pertandingan unrated terlebih dahulu. Pada Juli 2020, Riot memperkenalkan syarat \"win by two\" untuk pertandingan kompetitif, di mana alih-alih memainkan satu putaran sudden death di 12-12, tim akan bergantian memainkan putaran serangan dan pertahanan dalam perpanjangan waktu sampai tim mengklaim kemenangan dengan mengamankan keunggulan dua pertandingan."
+    },
+    {
+      "mode": "Deathmatch",
+      "deskripsi": "Mode Deathmatch diperkenalkan pada 5 Agustus 2020. 14 pemain mengikuti pertandingan free-for-all selama 10 menit dan orang pertama yang mencapai 40 pembunuhan atau pemain yang paling banyak membunuh ketika waktunya habis pertandingan. Pemain muncul dengan agen acak, dan semua kemampuan dinonaktifkan selama pertandingan yang memanjakan permainan senjata murni."
+    },
+    {
+      "mode": "Escalation",
+      "deskripsi": "Mode permainan Escalation diperkenalkan pada Februari 2021 dan mirip dengan konsep \"gungame\" yang ditemukan di Counter-Strike dan Call of Duty: Black Ops, meskipun berbasis tim daripada free-for-all dengan 5 pemain di setiap tim. Mode ini akan memilih 12 senjata untuk dilalui secara acak. Seperti versi gungame lainnya, sebuah tim perlu mendapatkan sejumlah pembunuhan untuk maju ke senjata berikutnya dan senjata semakin memburuk saat tim bergerak melewatinya."
+    },
+    {
+      "mode": "Swiftplay",
+      "deskripsi": "Swiftplay adalah mode best-of-nine spike (Plant/Defuse). Ini memiliki sebagian besar aturan gameplay yang sama dengan Unrated tetapi dengan beberapa perubahan untuk menyesuaikan durasinya yang lebih pendek."
+    }
+  ]
+}
