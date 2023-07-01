@@ -1,1 +1,45 @@
-/*# sourceMappingURL=karakter.css.map */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-slide {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+  padding: 20px;
+}
+.container-slide .btn-prev,
+.container-slide .btn-next {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+.container-slide .slider {
+  background-color: salmon;
+  width: 350px;
+  padding: 0;
+}
+.container-slide .slick-slide {
+  background-color: green;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-slide .slick-slide img {
+  width: 80px;
+  background-color: blueviolet;
+}
+.container-slide .slick-slide p {
+  text-align: center;
+  font-weight: 700;
+  background-color: white;
+  padding: 10px;
+}/*# sourceMappingURL=karakter.css.map */
