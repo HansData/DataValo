@@ -3,26 +3,81 @@
 
 // ? mengambil data dari valorant API
 
+function lebarLayar() {
+    $(window).ready(function () {
+
+        let lebarLayar = $(window).outerWidth();
+        if (lebarLayar > 1024) {
+
+            return $('.slider').slick({
+                infinite: true,
+                focusOnSelect: true,
+                speed: 300,
+                swipe: false,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                prevArrow: $(".btn-prev"),
+                nextArrow: $(".btn-next")
+            });
+        } else {
+            return $('.slider').slick({
+                infinite: true,
+                focusOnSelect: true,
+                speed: 300,
+                swipe: true,
+                swipeToSlide: true,
+                slidesToScroll: 5,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                prevArrow: $(".btn-prev"),
+                nextArrow: $(".btn-next")
+            });
+        }
+    })
+}
+
 
 function slickInit() {
     $('.slider').removeClass("slick-initialized slick-slider");
-    $('.slider').slick({
-        infinite: true,
-        focusOnSelect: true,
-        speed: 300,
-        swipe: false,
-        slidesToShow: 1,
-        centerMode: true,
-        variableWidth: true,
-        prevArrow: $(".btn-prev"),
-        nextArrow: $(".btn-next")
-    });
+
+    // ! mengecek layar ketika di buka dan menentukan fitur slide yg dipakai
+    lebarLayar()
+
 }
+
+function ubahStatis(sumber) {
+    $(".container-statis-karakter").html(` <div class="peran-karakter">
+                        <h2 class="h2-peran-karakter">${sumber.role.displayName}</h2>
+                        <div class="logo-role-agen"></div>
+                      </div>
+                      <div class="ability-karakter">
+                        <ul>
+                          <li class="logo-ability" data-id="0"><img src="${sumber.abilities[0].displayIcon}" alt="" /></li>
+                          <li class="logo-ability" data-id="1"><img src="${sumber.abilities[1].displayIcon}" alt="" /></li>
+                          <li class="logo-ability" data-id="2"><img src="${sumber.abilities[2].displayIcon}" alt="" /></li>
+                          <li class="logo-ability" data-id="3"><img src="${sumber.abilities[3].displayIcon}" alt="" /></li>
+                        </ul>
+                        <h3 class="h3-ability-karakter">${sumber.abilities[0].displayName.toUpperCase()}</h3>
+
+                        <p class="p-ability-karakter">
+                           ${sumber.abilities[0].description}
+                        </p>
+                      </div>`).find('div.logo-role-agen').css("background-image", `url(${sumber.role.displayIcon})`)
+
+    $('.logo-ability').click(function () {
+        let dataId = $(this).data('id')
+
+        $('.h3-ability-karakter').html(sumber.abilities[dataId].displayName.toUpperCase())
+        $('.p-ability-karakter').html(sumber.abilities[dataId].description)
+    })
+}
+
 
 $(window).ready(function () {
 
     function semuaAgen() {
-
 
         $.ajax({
             url: "https://valorant-api.com/v1/agents",
@@ -45,6 +100,7 @@ $(window).ready(function () {
                 <p class="p-slick-slide active-p-slick">${conten.displayName}</p>
               </li>
              `)
+
                     })
 
                     // ! slick init
@@ -54,6 +110,9 @@ $(window).ready(function () {
 
                     $("#image-karakter").attr("src", dataAgent[0].fullPortrait).css("background-image", `url( ${dataAgent[0].background})`)
 
+                    // ! function ubah statis
+                    ubahStatis(dataAgent[0])
+
                 }
 
             }
@@ -62,6 +121,9 @@ $(window).ready(function () {
     };
 
     semuaAgen()
+
+
+    // ?########################################
 
 
     $(".li-jenis-agen").click(function () {
@@ -109,6 +171,8 @@ $(window).ready(function () {
 
                     if (index == 0) {
                         $("#image-karakter").attr("src", informasiAgen.fullPortrait).css("background-image", `url( ${informasiAgen.background})`)
+
+                        ubahStatis(informasiAgen)
                     }
                 });
 
@@ -136,89 +200,53 @@ $(window).ready(function () {
         $(this).children("p.p-jenis-agen").addClass("active-p-lore")
 
 
-        // !###################### ketika ganti gambar
-
-        $('.slider').on("afterChange", function () {
-            let currentSlide = $('.slider').slick('slickCurrentSlide');
-            console.log(currentSlide)
-        })
-
-        // !################################ end nya
-
     })
 });
 
 
-// $('.slider').on("beforeChange", function () {
-
-//     let currentSlide = $('.slider').slick('slickCurrentSlide');
-
-//     $('.slick-slide').each(function (index, data) {
-
-//         if ($(this).hasClass('slick-active')) {
-//             let uuid = $(this).data('uuid')
-
-//             $.ajax({
-//                 url: `https://valorant-api.com/v1/agents/${uuid}`,
-//                 type: "get",
-//                 dataType: "json",
-//                 data: {
-//                     "language": "id-ID"
-//                 },
-//                 success: function (hasil) {
-
-//                     const dataPribadi = hasil.data;
-//                     $("#image-karakter").attr("src", dataPribadi.fullPortrait).css("background-image", `url( ${dataPribadi.background})`)
-
-//                 }
-//             })
-
-//         }
-
-//     })
-// })
-
-// ! percobaan slick
-// $(window).ready(function () {
-
-//     function slideDestop() {
-//         setTimeout(
-//             function () {
-//                 $('.slider').slick({
-//                     infinite: true,
-//                     focusOnSelect: true,
-//                     speed: 300,
-//                     swipe: false,
-//                     slidesToShow: 1,
-//                     centerMode: true,
-//                     variableWidth: true,
-//                     prevArrow: $(".btn-prev"),
-//                     nextArrow: $(".btn-next")
-//                 });
-//             }, 10)
-//     }
-
-//     function slideMobile() {
-//         setTimeout(
-//             function () {
-//                 $('.slider').slick({
-//                     infinite: true,
-//                     focusOnSelect: true,
-//                     speed: 300,
-//                     swipe: true,
-//                     swipeToSlide: true,
-//                     slidesToScroll: 5,
-//                     slidesToShow: 1,
-//                     centerMode: true,
-//                     variableWidth: true,
-//                     prevArrow: $(".btn-prev"),
-//                     nextArrow: $(".btn-next")
-//                 });
-//             },)
-//     }
-
-//     slideDestop()
 
 
+// !################################ ketika ganti gambar
 
-// })
+function getChangeStatis() {
+
+    $.ajax({
+        url: "https://valorant-api.com/v1/agents",
+        type: "get",
+        dataType: "json",
+
+        data: {
+            "isPlayableCharacter": "true",
+            "language": "id-ID",
+        },
+        success: function (hasil) {
+            const resultAgen = hasil.data;
+
+            $('.slider').on("afterChange", function () {
+                let uuidAgen = $('.slick-slide').filter('.slick-active').data('uuid');
+
+                $.each(resultAgen, function (index, data) {
+                    if (uuidAgen == data.uuid) {
+
+                        setTimeout(function () {
+
+                            $("#image-karakter").attr("src", data.fullPortrait).css("background-image", `url( ${data.background})`)
+
+                            // ! function ubah statis
+                            ubahStatis(data)
+                        }, 100)
+
+
+                    }
+                })
+
+
+            })
+        }
+    });
+
+}
+
+getChangeStatis()
+
+        // !################################ end nya

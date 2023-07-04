@@ -14,12 +14,14 @@ body {
   position: relative;
   background-color: aqua;
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
+  background-image: url("../components/background/bg-valo-gelap.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .container-main-karakter .container-karakter {
-  width: 80%;
+  width: 60%;
   height: 100%;
-  background-color: blue;
   display: flex;
 }
 .container-main-karakter .container-karakter .jenis-karakter {
@@ -117,7 +119,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 60px;
   padding: 10px;
   position: absolute;
   bottom: 0;
@@ -202,41 +203,39 @@ body {
   z-index: 9;
   padding: 10px;
   padding-top: 40px;
-  background-color: red;
 }
 .container-main-karakter .container-statis-karakter .peran-karakter {
   position: relative;
-  font-size: 1.5rem;
-  margin-bottom: 60px;
   display: flex;
-  width: max-content;
+  margin-bottom: 40px;
 }
 .container-main-karakter .container-statis-karakter .peran-karakter::before {
   content: "// PERAN :";
   font-weight: 700;
   position: absolute;
-  margin-top: -25px;
+  margin-top: -20px;
   font-size: 1rem;
 }
-.container-main-karakter .container-statis-karakter .peran-karakter::after {
-  content: "";
+.container-main-karakter .container-statis-karakter .h2-peran-karakter {
+  font-size: 2rem;
+  width: max-content;
+}
+.container-main-karakter .container-statis-karakter .logo-role-agen {
   width: 25px;
   height: 25px;
-  background-image: url("../components/image/displayicon (2).png");
+  margin-left: 5px;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  right: 0;
   align-self: center;
-  margin-right: -30px;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter {
   padding: 5px 0;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter ul .logo-ability {
   width: 70px;
@@ -244,12 +243,13 @@ body {
   border: 2px solid black;
   padding: 10px;
   cursor: pointer;
+  margin-top: 20px;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter ul .logo-ability img {
   width: 100%;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter h3 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   margin-left: 15px;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter p {
@@ -257,6 +257,7 @@ body {
   margin-left: 15px;
   line-height: normal;
   padding-right: 10px;
+  font-size: 0.9rem;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter p::before {
   content: "";
@@ -279,4 +280,83 @@ body {
   position: absolute;
   margin-top: -25px;
   font-size: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .container-main-karakter {
+    flex-direction: column;
+    overflow-y: auto;
+    height: max-content;
+  }
+  .container-main-karakter .container-karakter {
+    width: 100%;
+    z-index: 10;
+  }
+  .container-main-karakter .container-karakter .jenis-karakter {
+    position: static;
+  }
+  .container-main-karakter .container-slide {
+    position: relative;
+    margin-top: 160px;
+  }
+  .container-main-karakter .container-statis-karakter {
+    background-color: rgb(129, 130, 127);
+    width: 100%;
+    padding: 50px;
+    padding-top: 70px;
+    height: 500px;
+  }
+  .container-main-karakter .container-statis-karakter .peran-karakter {
+    margin-bottom: 60px;
+  }
+  .container-main-karakter .container-statis-karakter .peran-karakter::before {
+    margin-top: -30px;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter ul {
+    margin-bottom: 30px;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter h3 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter p {
+    font-size: 1.1rem;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter::before {
+    margin-top: -35px;
+  }
+}
+@media (max-width: 700px) {
+  .container-main-karakter .container-karakter .jenis-karakter {
+    display: none;
+  }
+  .container-main-karakter .container-karakter .gambar-karakter {
+    height: 80vh;
+    width: 100%;
+  }
+  .container-main-karakter .container-karakter .gambar-karakter img {
+    width: 600px;
+    margin-top: 0;
+  }
+  .container-main-karakter .container-slide {
+    position: relative;
+    margin-top: -30px;
+  }
+  .container-main-karakter .container-statis-karakter {
+    padding: 30px;
+    padding-top: 70px;
+    height: max-content;
+  }
+  .container-main-karakter .container-statis-karakter .peran-karakter {
+    margin-bottom: 60px;
+  }
+  .container-main-karakter .container-statis-karakter .peran-karakter::before {
+    margin-top: -30px;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter p {
+    margin-bottom: 30px;
+  }
+  .container-main-karakter .container-statis-karakter .ability-karakter::before {
+    margin-top: -35px;
+  }
 }/*# sourceMappingURL=karakter.css.map */
