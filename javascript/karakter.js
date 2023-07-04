@@ -48,29 +48,33 @@ function slickInit() {
 }
 
 function ubahStatis(sumber) {
-    $(".container-statis-karakter").html(` <div class="peran-karakter">
-                        <h2 class="h2-peran-karakter">${sumber.role.displayName}</h2>
-                        <div class="logo-role-agen"></div>
-                      </div>
-                      <div class="ability-karakter">
-                        <ul>
-                          <li class="logo-ability" data-id="0"><img src="${sumber.abilities[0].displayIcon}" alt="" /></li>
-                          <li class="logo-ability" data-id="1"><img src="${sumber.abilities[1].displayIcon}" alt="" /></li>
-                          <li class="logo-ability" data-id="2"><img src="${sumber.abilities[2].displayIcon}" alt="" /></li>
-                          <li class="logo-ability" data-id="3"><img src="${sumber.abilities[3].displayIcon}" alt="" /></li>
-                        </ul>
-                        <h3 class="h3-ability-karakter">${sumber.abilities[0].displayName.toUpperCase()}</h3>
+    $(".container-statis-karakter").html(`
+    <div class="peran-karakter">
+        <h2 class="h2-peran-karakter">${sumber.role.displayName}</h2>
+    <div class="logo-role-agen"></div>
+    </div>
+    <div class="ability-karakter">
+    <ul>
+        <li class="logo-ability logo-ability-click" data-id="0"><span class="span-atas"></span><span class="span-bawah"></span><img class="img-ability-click" src="${sumber.abilities[0].displayIcon}" alt="" /></li>
+        <li class="logo-ability" data-id="1"><span class="span-atas"></span><span class="span-bawah"></span><img src="${sumber.abilities[1].displayIcon}" alt="" /></li>
+        <li class="logo-ability" data-id="2"><span class="span-atas"></span><span class="span-bawah"></span><img src="${sumber.abilities[2].displayIcon}" alt="" /></li>
+        <li class="logo-ability" data-id="3"><span class="span-atas"></span><span class="span-bawah"></span><img src="${sumber.abilities[3].displayIcon}" alt="" /></li>
+    </ul>
+        <h3 class="h3-ability-karakter">${sumber.abilities[0].displayName.toUpperCase()}</h3>
 
-                        <p class="p-ability-karakter">
-                           ${sumber.abilities[0].description}
-                        </p>
-                      </div>`).find('div.logo-role-agen').css("background-image", `url(${sumber.role.displayIcon})`)
+        <p class="p-ability-karakter">
+            ${sumber.abilities[0].description}
+        </p>
+    </div>`).find('div.logo-role-agen').css("background-image", `url(${sumber.role.displayIcon})`)
 
     $('.logo-ability').click(function () {
         let dataId = $(this).data('id')
 
         $('.h3-ability-karakter').html(sumber.abilities[dataId].displayName.toUpperCase())
         $('.p-ability-karakter').html(sumber.abilities[dataId].description)
+
+        $('.logo-ability').removeClass('logo-ability-click').children('img').removeClass('img-ability-click');
+        $(this).addClass('logo-ability-click').children('img').addClass('img-ability-click');
     })
 }
 
@@ -249,4 +253,4 @@ function getChangeStatis() {
 
 getChangeStatis()
 
-        // !################################ end nya
+// !################################ end nya
