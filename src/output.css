@@ -522,9 +522,39 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.bg-red-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 }
 
 .text-green-900 {
@@ -534,8 +564,4 @@ video {
 
 .underline {
   text-decoration-line: underline;
-}
-
-.caret-violet-500 {
-  caret-color: #8b5cf6;
 }
