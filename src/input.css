@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .select-jenis-senjata {
+    @apply text-lg block px-5 py-3 cursor-pointer hover:bg-slate-800 font-subJudul;
+  }
+
+  .rotasi {
+    rotate: 180deg;
+  }
+
+  .statistik {
+    @apply flex  justify-between px-2 pr-12;
+  }
+
+  .border-campuran {
+    border-top: 2px dashed;
+    border-right: 2px dashed;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+  }
+}
+
+@layer utilities {
+  .font-judul {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .font-subJudul {
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  .font-isi {
+    font-family: 'Karma', serif;
+  }
+
+  .transisi {
+    transition: all 0.5s linear;
+  }
+}

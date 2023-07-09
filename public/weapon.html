@@ -4,31 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/output.css" />
-    <title>map</title>
+    <!-- ! font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans+Condensed:wght@500&family=Karma:wght@600&display=swap');
+    </style>
+    <title>weapon</title>
   </head>
-  <body>
-    <main class="container-main-weapon">
-      <section>
-        <h1>CARI SENJATAMU.</h1>
-        <form action="" target="_self" method="get" class="h-10 bg-neutral-900 overflow-hidden">
-          <select name="weapon" id="weapon" class="bg-red-800">
-            <option value="SEMUA SENJATA">SEMUA SENJATA</option>
-            <option value="PENEMBAK JITU">PENEMBAK JITU</option>
-            <option value="BERAT">BERAT</option>
-            <option value="JARAK DEKAT">JARAK DEKAT</option>
-            <option value="SENAPAN">SENAPAN</option>
-            <option value="SENAPAN GENTEL">SENAPAN GENTEL</option>
-            <option value="SENJATA SUBMESIN">SENJATA SUBMESIN</option>
-            <option value="SEBJATA SISI">SEBJATA SISI</option>
-          </select>
-        </form>
-      </section>
-      <section>
-        <div>
-          <h2>nama senjata</h2>
-          <img src="" alt="" />
-        </div>
-      </section>
+  <body class="">
+    <main class="container-main-weapon flex h-full w-screen min-w-[300px] relative max-w-[1500px] mx-auto">
+      <div class="decorasi-padding-kiri w-[5%] h-full bg-yellow-50 absolute left-0"></div>
+      <div class="decorasi-padding-kanan w-[5%] h-full bg-yellow-50 absolute right-0"></div>
+      <div class="container-section w-full mr-[5%] ml-[5%]">
+        <section class="">
+          <div class="judul-weapen py-5">
+            <h1 class="text-6xl font-bold pl-2 font-judul mt-5">CARI SENJATAMU.</h1>
+          </div>
+          <div id="form-select" class="relative">
+            <div class="relative flex items-center cursor-pointer border-campuran border-slate-600 mb-10 shadow-lg">
+              <span class="senjata-active text-lg block font-semibold p-5 font-subJudul">SEMUA SENJATA</span>
+              <img id="img-select" class="h-14 block absolute right-0" src="../components/icon/down-arrow.png" alt="" />
+            </div>
+            <div id="select-senjata" class="flex-col absolute h-52 w-full overflow-y-scroll hidden bg-green-400 bottom-0 -mb-52 divide-y">
+              <span class="select-jenis-senjata hidden">SEMUA SENJATA</span>
+              <span class="select-jenis-senjata">PENEMBAK JITU</span>
+              <span class="select-jenis-senjata">BERAT</span>
+              <span class="select-jenis-senjata">JARAK DEKAT</span>
+              <span class="select-jenis-senjata">SENAPAN</span>
+              <span class="select-jenis-senjata">SENAPAN GENTEL</span>
+              <span class="select-jenis-senjata">SENJATA SISI</span>
+            </div>
+          </div>
+        </section>
+        <section class="conten-weapon">
+          <div class="statis-senjata mb-5">
+            <div class="image-senjata h-max pb-10 cursor-pointer hover:shadow-lg transition-all border-2 border-stone-300 hover:border-stone-400">
+              <h2 class="nama-senjata font-semibold text-3xl p-6 font-judul">VANDAL</h2>
+              <div class="flex justify-center">
+                <img class="block w-full" src="../components/image/odin.png" alt="" />
+              </div>
+            </div>
+            <div class="data-senjata bg-slate-200 overflow-hidden h-0">
+              <div class="data-utama">
+                <h2 class="text-3xl py-3 border-b-2 border-stone-700 mb-2 font-subJudul pl-2">STATISTIK</h2>
+                <ul class="font-isi">
+                  <li class="statistik bg-sky-200"><span>Fire-Rate :</span><span>50.0</span></li>
+                  <li class="statistik bg-sky-300"><span>Run Speed :</span><span>50.0</span></li>
+                  <li class="statistik bg-sky-200"><span>Equip Speed :</span><span>50.0</span></li>
+                  <li class="statistik bg-sky-300"><span>Reload Speed :</span><span>50.0</span></li>
+                  <li class="statistik bg-sky-200"><span>Magazine :</span><span>50.0</span></li>
+                </ul>
+              </div>
+              <div class="data-damage">
+                <h2 class="text-3xl font-medium py-3 border-b-2 border-stone-700 mb-2 font-subJudul pl-2">DAMAGE</h2>
+                <ul class="font-isi">
+                  <li class="statistik bg-red-200">
+                    <div>distance :</div>
+                    <div>15-30m</div>
+                    <div>30-50m</div>
+                  </li>
+                  <li class="statistik bg-red-300">
+                    <div>head :</div>
+                    <div>140</div>
+                    <div>124</div>
+                  </li>
+                  <li class="statistik bg-red-200">
+                    <div>body :</div>
+                    <div>35</div>
+                    <div>31</div>
+                  </li>
+                  <li class="statistik bg-red-300">
+                    <div>legs :</div>
+                    <div>29.75</div>
+                    <div>26.35</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="../javascript/weapon.js"></script>
   </body>
 </html>
