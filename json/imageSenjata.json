@@ -1,0 +1,598 @@
+{
+  "senjata": [
+    {
+      "index": 0,
+      "nama": "CLASSIC",
+      "img": "classic.png",
+      "category": "Pistols",
+      "categoryText": "Senjata Sisi",
+      "uuid": "29a0cfab-485b-f5d5-779a-b59f85e204a8",
+      "weaponStats": {
+        "fireRate": 6.75,
+        "magazineSize": 12,
+        "runSpeedMultiplier": 0.85,
+        "equipTimeSeconds": 0.75,
+        "reloadTimeSeconds": 1.75,
+        "firstBulletAccuracy": 0.4,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "30 m",
+            "headDamage": 78,
+            "bodyDamage": 26,
+            "legDamage": 22.1
+          },
+          {
+            "rangeStartMeters": 30,
+            "rangeEndMeters": "50 m",
+            "headDamage": 66,
+            "bodyDamage": 22,
+            "legDamage": 18.7
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "nama": "SHORTY",
+      "img": "Shorty.png",
+      "category": "Pistols",
+      "categoryText": "Senjata Sisi",
+      "uuid": "42da8ccc-40d5-affc-beec-15aa47b42eda",
+      "weaponStats": {
+        "fireRate": 3.33,
+        "magazineSize": 2,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 0.75,
+        "reloadTimeSeconds": 1.75,
+        "firstBulletAccuracy": 4,
+        "shotgunPelletCount": 15,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "7 m",
+            "headDamage": 22,
+            "bodyDamage": 11,
+            "legDamage": 9.35
+          },
+          {
+            "rangeStartMeters": 7,
+            "rangeEndMeters": "15 m",
+            "headDamage": 12,
+            "bodyDamage": 6,
+            "legDamage": 5.1
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "nama": "FRENZY",
+      "img": "frenzy.png",
+      "category": "Pistols",
+      "categoryText": "Senjata Sisi",
+      "uuid": "44d4e95c-4157-0037-81b2-17841bf2e8e3",
+      "weaponStats": {
+        "fireRate": 10,
+        "magazineSize": 13,
+        "runSpeedMultiplier": 0.85,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 1.5,
+        "firstBulletAccuracy": 0.45,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "20 m",
+            "headDamage": 78,
+            "bodyDamage": 26,
+            "legDamage": 22.1
+          },
+          {
+            "rangeStartMeters": 20,
+            "rangeEndMeters": "50 m",
+            "headDamage": 63,
+            "bodyDamage": 21,
+            "legDamage": 17.85
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "nama": "GHOST",
+      "img": "ghost.png",
+      "category": "Pistols",
+      "categoryText": "Senjata Sisi",
+      "uuid": "1baa85b4-4c70-1284-64bb-6481dfc3bb4e",
+      "weaponStats": {
+        "fireRate": 6.75,
+        "magazineSize": 15,
+        "runSpeedMultiplier": 0.85,
+        "equipTimeSeconds": 0.75,
+        "reloadTimeSeconds": 1.5,
+        "firstBulletAccuracy": 0.3,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "30 m",
+            "headDamage": 105,
+            "bodyDamage": 30,
+            "legDamage": 25.5
+          },
+          {
+            "rangeStartMeters": 30,
+            "rangeEndMeters": "50 m",
+            "headDamage": 87.5,
+            "bodyDamage": 25,
+            "legDamage": 21.25
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "nama": "SHERIFF",
+      "img": "sheriff.png",
+      "category": "Pistols",
+      "categoryText": "Senjata Sisi",
+      "uuid": "e336c6b8-418d-9340-d77f-7a9e4cfe0702",
+      "weaponStats": {
+        "fireRate": 4,
+        "magazineSize": 6,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.25,
+        "firstBulletAccuracy": 0.25,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "30 m",
+            "headDamage": 159.5,
+            "bodyDamage": 55,
+            "legDamage": 46.7
+          },
+          {
+            "rangeStartMeters": 30,
+            "rangeEndMeters": "50 m",
+            "headDamage": 145,
+            "bodyDamage": 50,
+            "legDamage": 42.5
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "nama": "STINGER",
+      "img": "stinger.png",
+      "category": "SMGs",
+      "categoryText": "SENJATA SUBMESIN",
+      "uuid": "f7e1b454-4ad4-1063-ec0a-159e56b58941",
+      "weaponStats": {
+        "fireRate": 16,
+        "magazineSize": 20,
+        "runSpeedMultiplier": 0.85,
+        "equipTimeSeconds": 0.75,
+        "reloadTimeSeconds": 2.25,
+        "firstBulletAccuracy": 0.65,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "15 m",
+            "headDamage": 67.5,
+            "bodyDamage": 27,
+            "legDamage": 22.95
+          },
+          {
+            "rangeStartMeters": 15,
+            "rangeEndMeters": "50 m",
+            "headDamage": 57,
+            "bodyDamage": 23,
+            "legDamage": 19
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "nama": "SPECTRE",
+      "img": "spectre.png",
+      "category": "SMGs",
+      "categoryText": "SENJATA SUBMESIN",
+      "uuid": "462080d1-4035-2937-7c09-27aa2a5c27a7",
+      "weaponStats": {
+        "fireRate": 13.33,
+        "magazineSize": 30,
+        "runSpeedMultiplier": 0.85,
+        "equipTimeSeconds": 0.75,
+        "reloadTimeSeconds": 2.25,
+        "firstBulletAccuracy": 0.4,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "15 m",
+            "headDamage": 78,
+            "bodyDamage": 26,
+            "legDamage": 22.1
+          },
+          {
+            "rangeStartMeters": 15,
+            "rangeEndMeters": "30 m",
+            "headDamage": 66,
+            "bodyDamage": 22,
+            "legDamage": 18.7
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "nama": "BUCKY",
+      "img": "bucky.png",
+      "category": "Shotguns",
+      "categoryText": "Senapan Gentel",
+      "uuid": "910be174-449b-c412-ab22-d0873436b21b",
+      "weaponStats": {
+        "fireRate": 1.1,
+        "magazineSize": 5,
+        "runSpeedMultiplier": 0.75,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 2.6,
+        "shotgunPelletCount": 15,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "8 m",
+            "headDamage": 40,
+            "bodyDamage": 20,
+            "legDamage": 17
+          },
+          {
+            "rangeStartMeters": 8,
+            "rangeEndMeters": "12 m",
+            "headDamage": 26,
+            "bodyDamage": 13,
+            "legDamage": 11.05
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "nama": "JUDGE",
+      "img": "judge.png",
+      "category": "Shotguns",
+      "categoryText": "Senapan Gentel",
+      "uuid": "ec845bf4-4f79-ddda-a3da-0db3774b2794",
+      "weaponStats": {
+        "fireRate": 3.5,
+        "magazineSize": 7,
+        "runSpeedMultiplier": 0.75,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.2,
+        "firstBulletAccuracy": 2.25,
+        "shotgunPelletCount": 12,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "10 m",
+            "headDamage": 34,
+            "bodyDamage": 17,
+            "legDamage": 14.45
+          },
+          {
+            "rangeStartMeters": 10,
+            "rangeEndMeters": "20 m",
+            "headDamage": 20,
+            "bodyDamage": 10,
+            "legDamage": 8.5
+          }
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "nama": "BULLDOG",
+      "img": "bulldog.png",
+      "category": "Rifles",
+      "categoryText": "Senapan Serbu",
+      "uuid": "ae3de142-4d85-2547-dd26-4e90bed35cf7",
+      "weaponStats": {
+        "fireRate": 10,
+        "magazineSize": 24,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 0.3,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "50 m",
+            "headDamage": 115.5,
+            "bodyDamage": 35,
+            "legDamage": 29.75
+          },
+          {
+            "rangeStartMeters": "",
+            "rangeEndMeters": "",
+            "headDamage": "-",
+            "bodyDamage": "-",
+            "legDamage": "-"
+          }
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "nama": "GUARDIAN",
+      "img": "guardian.png",
+      "category": "Rifles",
+      "categoryText": "Senapan Serbu",
+      "uuid": "4ade7faa-4cf1-8376-95ef-39884480959b",
+      "weaponStats": {
+        "fireRate": 5.25,
+        "magazineSize": 12,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 0.1,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "50 m",
+            "headDamage": 195,
+            "bodyDamage": 65,
+            "legDamage": 48.75
+          },
+          {
+            "rangeStartMeters": "",
+            "rangeEndMeters": "",
+            "headDamage": "-",
+            "bodyDamage": "-",
+            "legDamage": "-"
+          }
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "nama": "PHANTOM",
+      "img": "phantom.png",
+      "category": "Rifles",
+      "categoryText": "Senapan Serbu",
+      "uuid": "ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a",
+      "weaponStats": {
+        "fireRate": 11,
+        "magazineSize": 30,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 0.2,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "15 m",
+            "headDamage": 156,
+            "bodyDamage": 39,
+            "legDamage": 33.15
+          },
+          {
+            "rangeStartMeters": 15,
+            "rangeEndMeters": "30 m",
+            "headDamage": 140,
+            "bodyDamage": 35,
+            "legDamage": 29.75
+          }
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "nama": "VANDAL",
+      "img": "vandal.png",
+      "category": "Rifles",
+      "categoryText": "Senapan Serbu",
+      "uuid": "9c82e19d-4575-0200-1a81-3eacf00cf872",
+      "weaponStats": {
+        "fireRate": 9.75,
+        "magazineSize": 25,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 0.25,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "50 m",
+            "headDamage": 160,
+            "bodyDamage": 40,
+            "legDamage": 34
+          },
+          {
+            "rangeStartMeters": "",
+            "rangeEndMeters": "",
+            "headDamage": "-",
+            "bodyDamage": "-",
+            "legDamage": "-"
+          }
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "nama": "MARSHAL",
+      "img": "marshal.png",
+      "category": "Sniper Rifles",
+      "categoryText": "Senapan Penembak Runduk",
+      "uuid": "c4883e50-4494-202c-3ec3-6b8a9284f00b",
+      "weaponStats": {
+        "fireRate": 1.5,
+        "magazineSize": 5,
+        "runSpeedMultiplier": 0.8,
+        "equipTimeSeconds": 1.25,
+        "reloadTimeSeconds": 2.5,
+        "firstBulletAccuracy": 1,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "50 m",
+            "headDamage": 202,
+            "bodyDamage": 101,
+            "legDamage": 85.85
+          },
+          {
+            "rangeStartMeters": "",
+            "rangeEndMeters": "",
+            "headDamage": "-",
+            "bodyDamage": "-",
+            "legDamage": "-"
+          }
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "nama": "OPERATOR",
+      "img": "operator.png",
+      "category": "Sniper Rifles",
+      "categoryText": "Senapan Penembak Runduk",
+      "uuid": "a03b24d3-4319-996d-0f8c-94bbfba1dfc7",
+      "weaponStats": {
+        "fireRate": 0.6,
+        "magazineSize": 5,
+        "runSpeedMultiplier": 0.76,
+        "equipTimeSeconds": 1.5,
+        "reloadTimeSeconds": 3.7,
+        "firstBulletAccuracy": 5,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "50 m",
+            "headDamage": 255,
+            "bodyDamage": 150,
+            "legDamage": 120
+          },
+          {
+            "rangeStartMeters": "",
+            "rangeEndMeters": "",
+            "headDamage": "-",
+            "bodyDamage": "-",
+            "legDamage": "-"
+          }
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "nama": "ARES",
+      "img": "ares.png",
+      "category": "Heavy Weapons",
+      "categoryText": "Senjata Berat",
+      "uuid": "55d8a0f4-4274-ca67-fe2c-06ab45efdf58",
+      "weaponStats": {
+        "fireRate": 13,
+        "magazineSize": 50,
+        "runSpeedMultiplier": 0.76,
+        "equipTimeSeconds": 1.25,
+        "reloadTimeSeconds": 3.25,
+        "firstBulletAccuracy": 1,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "30 m",
+            "headDamage": 72,
+            "bodyDamage": 30,
+            "legDamage": 25.5
+          },
+          {
+            "rangeStartMeters": 30,
+            "rangeEndMeters": "50 m",
+            "headDamage": 67.2,
+            "bodyDamage": 28,
+            "legDamage": 23.8
+          }
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "nama": "ODIN",
+      "img": "odin.png",
+      "category": "Heavy Weapons",
+      "categoryText": "Senjata Berat",
+      "uuid": "63e6c2b6-4a8e-869c-3d4c-e38355226584",
+      "weaponStats": {
+        "fireRate": 12,
+        "magazineSize": 100,
+        "runSpeedMultiplier": 0.76,
+        "equipTimeSeconds": 1.25,
+        "reloadTimeSeconds": 5,
+        "firstBulletAccuracy": 0.8,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": 0,
+            "rangeEndMeters": "30 m",
+            "headDamage": 95,
+            "bodyDamage": 38,
+            "legDamage": 32.3
+          },
+          {
+            "rangeStartMeters": 30,
+            "rangeEndMeters": "50 m",
+            "headDamage": 77.5,
+            "bodyDamage": 31,
+            "legDamage": 26.35
+          }
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "nama": "PISAU TAKTIS",
+      "img": "tactical-knife.png",
+      "category": "Melee",
+      "categoryText": "Senjata Jarak Dekat",
+      "uuid": "2f59173c-4bed-b6c3-2191-dea9b58be9c7",
+      "weaponStats": {
+        "fireRate": 12,
+        "magazineSize": 100,
+        "runSpeedMultiplier": 0.76,
+        "equipTimeSeconds": 1.25,
+        "reloadTimeSeconds": 5,
+        "firstBulletAccuracy": 0.8,
+        "shotgunPelletCount": 1,
+        "damageRanges": [
+          {
+            "rangeStartMeters": "Dari",
+            "rangeEndMeters": "Depan",
+            "headDamage": "Click kanan 75",
+            "bodyDamage": "Click kiri 50",
+            "legDamage": "-"
+          },
+          {
+            "rangeStartMeters": "Dari",
+            "rangeEndMeters": "Belakang",
+            "headDamage": "Click kanan 150",
+            "bodyDamage": "Click kiri 100",
+            "legDamage": "-"
+          }
+        ]
+      }
+    }
+  ]
+}

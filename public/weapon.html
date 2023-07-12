@@ -11,80 +11,37 @@
     <title>weapon</title>
   </head>
   <body class="">
-    <main class="container-main-weapon flex h-full w-screen min-w-[300px] relative max-w-[1500px] mx-auto">
-      <div class="decorasi-padding-kiri w-[5%] h-full bg-yellow-50 absolute left-0"></div>
-      <div class="decorasi-padding-kanan w-[5%] h-full bg-yellow-50 absolute right-0"></div>
-      <div class="container-section w-full mr-[5%] ml-[5%]">
-        <section class="">
-          <div class="judul-weapen py-5">
-            <h1 class="text-6xl font-bold pl-2 font-judul mt-5">CARI SENJATAMU.</h1>
+    <main class="container-main-weapon flex h-full min-w-[300px] relative max-w-[1500px] mx-auto pb-32">
+      <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-stone-500 absolute"></div>
+      <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute"></div>
+      <div class="container-section w-full mr-[5%] ml-[5%] lg:ml-[7%] lg:mr-[7%]">
+        <section class="lg:flex pt-5">
+          <div class="judul-weapon py-5 lg:flex-auto h-max">
+            <h1 class="text-6xl font-bold pl-2 font-judul lg:text-[6.5rem]">CARI SENJATAMU.</h1>
           </div>
-          <div id="form-select" class="relative">
-            <div class="relative flex items-center cursor-pointer border-campuran border-slate-600 mb-10 shadow-lg">
+          <div id="form-select" class="relative mb-10 h-max lg:flex-1 lg:mb-20 lg:mt-32 lg:min-w-[400px] z-10">
+            <div id="category" class="relative flex items-center cursor-pointer border-campuran border-slate-600 shadow-lg">
               <span class="senjata-active text-lg block font-semibold p-5 font-subJudul">SEMUA SENJATA</span>
-              <img id="img-select" class="h-14 block absolute right-0" src="../components/icon/down-arrow.png" alt="" />
+              <img id="img-select" class="h-14 block absolute right-0 transition-all" src="../components/icon/down-arrow.png" alt="" />
             </div>
-            <div id="select-senjata" class="flex-col absolute h-52 w-full overflow-y-scroll hidden bg-green-400 bottom-0 -mb-52 divide-y">
-              <span class="select-jenis-senjata hidden">SEMUA SENJATA</span>
-              <span class="select-jenis-senjata">PENEMBAK JITU</span>
-              <span class="select-jenis-senjata">BERAT</span>
-              <span class="select-jenis-senjata">JARAK DEKAT</span>
-              <span class="select-jenis-senjata">SENAPAN</span>
-              <span class="select-jenis-senjata">SENAPAN GENTEL</span>
-              <span class="select-jenis-senjata">SENJATA SISI</span>
+            <div id="select-senjata" class="flex-col absolute h-0 w-full overflow-y-scroll bg-green-400 top-0 mt-[72px] divide-y transition-all">
+              <span class="select-jenis-senjata hidden" data-category="semua senjata">SEMUA SENJATA</span>
+              <span class="select-jenis-senjata" data-category="Heavy Weapons">SENJATA BERAT</span>
+              <span class="select-jenis-senjata" data-category="Rifles">SENAPAN SERBU</span>
+              <span class="select-jenis-senjata" data-category="Shotguns">SENAPAN GENTEL</span>
+              <span class="select-jenis-senjata" data-category="Sniper Rifles">SENAPAN RUNDUK</span>
+              <span class="select-jenis-senjata" data-category="SMGs">SENJATA SUBMESIN</span>
+              <span class="select-jenis-senjata" data-category="Pistols">SENJATA SISI</span>
+              <span class="select-jenis-senjata" data-category="Melee">JARAK DEKAT</span>
             </div>
           </div>
         </section>
-        <section class="conten-weapon">
-          <div class="statis-senjata mb-5">
-            <div class="image-senjata h-max pb-10 cursor-pointer hover:shadow-lg transition-all border-2 border-stone-300 hover:border-stone-400">
-              <h2 class="nama-senjata font-semibold text-3xl p-6 font-judul">VANDAL</h2>
-              <div class="flex justify-center">
-                <img class="block w-full" src="../components/image/odin.png" alt="" />
-              </div>
-            </div>
-            <div class="data-senjata bg-slate-200 overflow-hidden h-0">
-              <div class="data-utama">
-                <h2 class="text-3xl py-3 border-b-2 border-stone-700 mb-2 font-subJudul pl-2">STATISTIK</h2>
-                <ul class="font-isi">
-                  <li class="statistik bg-sky-200"><span>Fire-Rate :</span><span>50.0</span></li>
-                  <li class="statistik bg-sky-300"><span>Run Speed :</span><span>50.0</span></li>
-                  <li class="statistik bg-sky-200"><span>Equip Speed :</span><span>50.0</span></li>
-                  <li class="statistik bg-sky-300"><span>Reload Speed :</span><span>50.0</span></li>
-                  <li class="statistik bg-sky-200"><span>Magazine :</span><span>50.0</span></li>
-                </ul>
-              </div>
-              <div class="data-damage">
-                <h2 class="text-3xl font-medium py-3 border-b-2 border-stone-700 mb-2 font-subJudul pl-2">DAMAGE</h2>
-                <ul class="font-isi">
-                  <li class="statistik bg-red-200">
-                    <div>distance :</div>
-                    <div>15-30m</div>
-                    <div>30-50m</div>
-                  </li>
-                  <li class="statistik bg-red-300">
-                    <div>head :</div>
-                    <div>140</div>
-                    <div>124</div>
-                  </li>
-                  <li class="statistik bg-red-200">
-                    <div>body :</div>
-                    <div>35</div>
-                    <div>31</div>
-                  </li>
-                  <li class="statistik bg-red-300">
-                    <div>legs :</div>
-                    <div>29.75</div>
-                    <div>26.35</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <section id="conten-weapon" class="conten-weapon lg:flex lg:justify-between lg:flex-wrap box-border">
+          <!-- ! bagian card -->
         </section>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="../javascript/weapon.js"></script>
+    <script src="js/weapon.js"></script>
   </body>
 </html>

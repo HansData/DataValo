@@ -37,4 +37,14 @@
   .transisi {
     transition: all 0.5s linear;
   }
+
+  .bayangan {
+    filter: drop-shadow(1rem 1.5rem 0 rgba(15, 25, 35, 0.17));
+    -webkit-filter: drop-shadow(1rem 1.5rem 0 rgba(15, 25, 35, 0.17));
+  }
+
+  .bayangan-hover {
+    filter: drop-shadow(0.5rem 0.5rem 1px rgba(15, 25, 35, 0.17));
+    -webkit-filter: drop-shadow(1.5rem 2.5rem 1px rgba(15, 25, 35, 0.17));
+  }
 }
