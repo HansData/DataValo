@@ -6,7 +6,7 @@
 function lebarLayar() {
     $(window).ready(function () {
 
-        let lebarLayar = $(window).outerWidth();
+        let lebarLayar = $(window).outerWidth(true);
         if (lebarLayar > 1024) {
 
             return $('.slider').slick({

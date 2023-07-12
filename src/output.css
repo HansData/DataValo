@@ -602,6 +602,10 @@ video {
   margin-left: 5%;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .mr-\[5\%\] {
   margin-right: 5%;
 }
@@ -634,8 +638,8 @@ video {
   height: 3.5rem;
 }
 
-.h-24 {
-  height: 6rem;
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-52 {
@@ -655,12 +659,20 @@ video {
   height: max-content;
 }
 
-.w-24 {
-  width: 6rem;
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-\[5\%\] {
   width: 5%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .w-full {
@@ -723,19 +735,24 @@ video {
   border-color: rgb(214 211 209 / var(--tw-border-opacity));
 }
 
-.border-stone-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(68 64 60 / var(--tw-border-opacity));
-}
-
 .border-stone-500 {
   --tw-border-opacity: 1;
   border-color: rgb(120 113 108 / var(--tw-border-opacity));
 }
 
+.border-stone-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(68 64 60 / var(--tw-border-opacity));
+}
+
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
+.bg-pink-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
 }
 
 .bg-red-200 {
@@ -748,16 +765,6 @@ video {
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
 .bg-sky-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(186 230 253 / var(--tw-bg-opacity));
@@ -768,14 +775,27 @@ video {
   background-color: rgb(125 211 252 / var(--tw-bg-opacity));
 }
 
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-.bg-sky-400 {
+.bg-violet-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-5 {
@@ -800,20 +820,16 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.pb-32 {
+  padding-bottom: 8rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pb-32 {
-  padding-bottom: 8rem;
 }
 
 .text-3xl {
@@ -846,11 +862,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.text-green-900 {
-  --tw-text-opacity: 1;
-  color: rgb(20 83 45 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -886,12 +897,6 @@ video {
   -webkit-filter: drop-shadow(1rem 1.5rem 0 rgba(15, 25, 35, 0.17));
 }
 
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:border-dashed:hover {
   border-style: dashed;
 }
@@ -905,11 +910,6 @@ video {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.hover\:bayangan-hover:hover {
-  filter: drop-shadow(0.5rem 0.5rem 1px rgba(15, 25, 35, 0.17));
-  -webkit-filter: drop-shadow(1.5rem 2.5rem 1px rgba(15, 25, 35, 0.17));
 }
 
 .group:hover .group-hover\:scale-110 {
@@ -951,6 +951,10 @@ video {
     margin-top: 8rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -961,10 +965,6 @@ video {
 
   .lg\:w-\[7\%\] {
     width: 7%;
-  }
-
-  .lg\:w-\[0\%\] {
-    width: 0%;
   }
 
   .lg\:min-w-\[400px\] {
@@ -985,6 +985,14 @@ video {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:bg-\[url\(\'\.\.\/components\/icon\/button-previe\.png\'\)\] {
+    background-image: url('../components/icon/button-previe.png');
+  }
+
+  .lg\:bg-\[url\(\'\.\.\/components\/icon\/button-next\.png\'\)\] {
+    background-image: url('../components/icon/button-next.png');
   }
 
   .lg\:text-6xl {
