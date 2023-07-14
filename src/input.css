@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Karma', serif;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+}
+
 @layer components {
   .select-jenis-senjata {
     @apply text-lg block px-5 py-3 cursor-pointer hover:bg-slate-800 font-subJudul;
@@ -24,16 +42,6 @@
 }
 
 @layer utilities {
-  .font-judul {
-    font-family: 'Bebas Neue', sans-serif;
-  }
-  .font-subJudul {
-    font-family: 'Fira Sans Condensed', sans-serif;
-  }
-  .font-isi {
-    font-family: 'Karma', serif;
-  }
-
   .transisi {
     transition: all 0.5s linear;
   }
@@ -41,6 +49,10 @@
   .bayangan {
     filter: drop-shadow(1rem 1.5rem 0 rgba(15, 25, 35, 0.17));
     -webkit-filter: drop-shadow(1rem 1.5rem 0 rgba(15, 25, 35, 0.17));
+  }
+  .bayangan2 {
+    filter: drop-shadow(0.2rem 0.5rem 1px rgba(15, 25, 35, 0.17));
+    -webkit-filter: drop-shadow(0.5rem 0.5rem 1px rgba(15, 25, 35, 0.17));
   }
 
   .bayangan-hover {

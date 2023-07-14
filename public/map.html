@@ -6,59 +6,96 @@
     <link rel="stylesheet" href="../slick-slide/slick/slick.css" />
     <link rel="stylesheet" href="../slick-slide/slick/slick-theme.css" />
     <link rel="stylesheet" href="../src/output.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans+Condensed:wght@500&family=Karma:wght@600&display=swap');
+
+      .slick-current {
+        background-color: red;
+      }
+    </style>
+
     <title>map</title>
   </head>
-  <body class="bg-pink-300">
-    <div class="main-slide flex items-center">
-      <div id="arrowPrev" class="h-5 w-5 bg-sky-500 hidden lg:block lg:bg-[url('../components/icon/button-previe.png')] bg-cover bg-center"></div>
-      <div class="slide-slick w-[90%] bg-sky-200 mx-auto">
-        <div class="conten">
-          <img src="../components/image/mapsplash.png" alt="" />
-          <h1>map1</h1>
-        </div>
-        <div class="conten">
-          <img src="../components/image/mapsplash.png" alt="" />
-          <h1>map2</h1>
-        </div>
-        <div class="conten">
-          <img src="../components/image/mapsplash.png" alt="" />
-          <h1>map3</h1>
-        </div>
-        <div class="conten">
-          <img src="../components/image/mapsplash.png" alt="" />
-          <h1>map4</h1>
-        </div>
-        <div class="conten">
-          <img src="../components/image/mapsplash.png" alt="" />
-          <h1>map5</h1>
-        </div>
-      </div>
-      <div id="arrowNext" class="h-5 w-5 bg-sky-500 hidden lg:block lg:bg-[url('../components/icon/button-next.png')] bg-cover bg-center"></div>
-    </div>
+  <body class="relative">
+    <!-- ? decorasi padding kanan kiri -->
+    <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-stone-500 absolute"></div>
+    <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute"></div>
+    <main class="pt-28 pb-20">
+      <!-- ? keseluruhan conten map.html -->
+      <section class="container-slide-map mr-[5%] ml-[5%] lg:ml-[7%] lg:mr-[7%] lg:relative">
+        <h1 class="text-5xl font-bold font-judul pl-2 md:text-7xl lg:text-9xl border-b-2 border-stone-500 border-dashed mb-2">PETA</h1>
+        <!-- ?slide ke 2 sebagai navigasi slide 1 -->
+        <section class="tes w-full lg:absolute bottom-0 z-10">
+          <div class="slide w-full right-0 mx-auto">
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+          </div>
+        </section>
 
-    <!-- ?#################### slider slick 2 nav-->
-    <div class="slide w-4/5 bg-red-300 mx-auto">
-      <div class="conten bg-violet-400 mr-10">
-        <img src="../components/image/iconMap.png" alt="" />
-        <h1>map1</h1>
-      </div>
-      <div class="conten bg-violet-400 mr-10">
-        <img src="../components/image/iconMap.png" alt="" />
-        <h1>map2</h1>
-      </div>
-      <div class="conten bg-violet-400 mr-10">
-        <img src="../components/image/iconMap.png" alt="" />
-        <h1>map3</h1>
-      </div>
-      <div class="conten bg-violet-400 mr-10">
-        <img src="../components/image/iconMap.png" alt="" />
-        <h1>map4</h1>
-      </div>
-      <div class="conten bg-violet-400 mr-10">
-        <img src="../components/image/iconMap.png" alt="" />
-        <h1>map5</h1>
-      </div>
-    </div>
+        <!-- ? keseluruhan slide pertama -->
+        <section class="main-slide flex items-center relative">
+          <div id="arrowPrev" class="h-[65px] w-[45px] hidden lg:block lg:bg-[url('../components/icon/button-previe.png')] bg-cover bg-center absolute left-0 cursor-pointer"></div>
+          <div id="arrowNext" class="h-[65px] w-[45px] hidden lg:block lg:bg-[url('../components/icon/button-next.png')] bg-cover bg-center absolute right-0 cursor-pointer"></div>
+
+          <!-- ?isi gambar slide pertama -->
+          <section id="slide-slick" class="slide-slick w-full lg:w-[80%] bg-sky-200/0 mx-auto">
+            <div class="conten-slick relative bg-slate-700">
+              <img class="lg:w-[100%]" src="../components/image/mapsplash.png" alt="" />
+
+              <div class="denah-map relative lg:absolute lg:bottom-0 lg:right-0 lg:w-48 lg:h-48 p-5 bg-white group lg:hover:w-full lg:hover:h-full lg:hover:bg-white/50 transition-all">
+                <span class="text-sm font-semibold absolute left-0 top-0 rotate-90 group-hover:text-lg">01</span>
+                <h3 class="text-base font-semibold mb-2.5 group-hover:text-4xl group-hover:ml-5">LOTUS</h3>
+                <img class="lg:w-[80%] group-hover:lg:w-1/2 bayangan2 border-2 border-stone-600 border-dashed mx-auto" src="../components/image/denahMap.png" alt="" />
+              </div>
+            </div>
+            <!-- ? slide yg lain -->
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+            <div class="conten-slick">
+              <img src="../components/image/mapsplash.png" alt="" />
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
     <!-- <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script> -->
     <script src="../code.jquery.com_jquery-3.7.0.js"></script>
     <script src="../slick-slide/slick/slick.min.js"></script>

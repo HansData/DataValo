@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'judul': ['Bebas Neue', 'sans-serif'],
+        'subJudul': ['Fira Sans Condensed', 'sans-serif'],
+        'isi': ['Karma', 'serif']
+      }
+    },
   },
   plugins: [],
 }
