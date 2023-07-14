@@ -27,6 +27,6 @@
 .ionide
 
 ### node_module ###
-node_module/
+node_module
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,sass
