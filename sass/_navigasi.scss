@@ -2,6 +2,7 @@
 body,
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -22,7 +23,7 @@ body {
 .dark-mode {
   --clr-primary: #212a3e;
   --clr-secondary: #1a212e;
-  --clr-bg-gradasi: #212a3e;
+  --clr-bg-gradasi: linear-gradient(347deg, rgba(33, 42, 62, 1) 45%, #1a5349 75%, rgba(33, 42, 62, 1) 100%);
   --clr-h1-text: #1f8a70;
   --clr-p-text: #967e76;
 }

@@ -22,7 +22,6 @@
     .conten-h1 {
       font-size: 2.4rem;
       font-weight: 700;
-      font-family: 'Acme', sans-serif;
       color: var(--clr-h1-text);
     }
 
@@ -31,6 +30,11 @@
       overflow: hidden;
       animation: underline 3s ease-in-out;
       -webkit-animation: underline 3s ease-in-out;
+      margin-top: -15px;
+
+      .underline {
+        min-width: 10rem;
+      }
 
       @keyframes underline {
         0% {
@@ -42,15 +46,10 @@
       }
     }
 
-    .underline {
-      width: 10rem;
-    }
-
     .conten-p {
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--clr-p-text);
-      font-family: 'Kalam', cursive;
       line-height: 1.5rem;
     }
 
@@ -115,6 +114,14 @@
       background-position: center;
       background-size: 80%;
       gap: 40px;
+
+      .conten-h1 {
+        font-size: 4rem;
+      }
+
+      .img-underline {
+        margin-top: -28px;
+      }
     }
   }
 }

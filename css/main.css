@@ -133,6 +133,7 @@ table {
 body,
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -153,7 +154,7 @@ body {
 .dark-mode {
   --clr-primary: #212a3e;
   --clr-secondary: #1a212e;
-  --clr-bg-gradasi: #212a3e;
+  --clr-bg-gradasi: linear-gradient(347deg, rgba(33, 42, 62, 1) 45%, #1a5349 75%, rgba(33, 42, 62, 1) 100%);
   --clr-h1-text: #1f8a70;
   --clr-p-text: #967e76;
 }
@@ -354,7 +355,6 @@ body {
 .header .conten-judul .conten-h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  font-family: "Acme", sans-serif;
   color: var(--clr-h1-text);
 }
 .header .conten-judul .img-underline {
@@ -362,6 +362,10 @@ body {
   overflow: hidden;
   animation: underline 3s ease-in-out;
   -webkit-animation: underline 3s ease-in-out;
+  margin-top: -15px;
+}
+.header .conten-judul .img-underline .underline {
+  min-width: 10rem;
 }
 @keyframes underline {
   0% {
@@ -371,14 +375,10 @@ body {
     width: 10rem;
   }
 }
-.header .conten-judul .underline {
-  width: 10rem;
-}
 .header .conten-judul .conten-p {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--clr-p-text);
-  font-family: "Kalam", cursive;
   line-height: 1.5rem;
 }
 .header .conten-judul .button {
@@ -437,6 +437,12 @@ body {
     background-size: 80%;
     gap: 40px;
   }
+  .header .conten-judul .conten-h1 {
+    font-size: 4rem;
+  }
+  .header .conten-judul .img-underline {
+    margin-top: -28px;
+  }
 }
 .container-button {
   display: grid;
@@ -450,6 +456,7 @@ body {
   width: 135px;
   height: 47px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .container-button:active {
@@ -645,28 +652,33 @@ button::after {
   stroke-dashoffset: -32.42;
 }
 
-main {
-  padding-top: 100px;
-}
-main section {
+section section {
   box-sizing: border-box;
 }
 
 .text-valorant {
   width: 100%;
   text-align: center;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-image: url("../components/background/bg-6.jpg");
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  mask-image: linear-gradient(180deg, black, rgb(243, 243, 243));
+  -webkit-mask-image: linear-gradient(0deg, rgb(0, 0, 0) 70%, rgba(255, 253, 253, 0));
 }
 .text-valorant .h1-valorant {
   font-size: 7vh;
   font-weight: bold;
-  font-family: "Rye", cursive;
   color: rgb(248, 40, 40);
 }
 
 @media (min-width: 768px) {
   .text-valorant {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
   .text-valorant .h1-valorant {
     font-size: 8vw;
@@ -678,6 +690,7 @@ main section {
   background-image: url(../components/background/tanda-tanya.svg);
   background-repeat: repeat;
   min-height: 844px;
+  padding-top: 20px;
 }
 .section-aboutGame .section-conten-aboutGame {
   margin-left: 5%;
@@ -702,22 +715,21 @@ main section {
   font-weight: 700;
   color: #ff725e;
   line-height: 3rem;
-  font-family: "Righteous", cursive;
 }
 .section-aboutGame .section-p-aboutGame {
   line-height: 1.5rem;
   padding-right: 10px;
-  font-family: "Sriracha", cursive;
   color: var(--clr-p-text);
 }
 
 @media (min-width: 768px) {
   .section-aboutGame {
     display: flex;
+    padding-top: 0;
   }
   .section-aboutGame .line {
     height: 100%;
-    background-color: #161616;
+    background-color: rgba(11, 11, 11, 0.7960784314);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     flex: 1;
@@ -730,13 +742,13 @@ main section {
     position: absolute;
     width: 10px;
     height: 100%;
-    background-color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
   }
   .section-aboutGame .line .line-two {
     width: 20px;
     height: 20px;
     rotate: 45deg;
-    background-color: black;
+    background-color: rgb(219, 219, 219);
     box-sizing: content-box;
     display: flex;
     justify-content: center;
@@ -788,8 +800,8 @@ main section {
 .section-mode .section-conten-mode .section-judul-mode {
   display: flex;
   justify-content: start;
-  align-items: end;
-  margin-top: -35px;
+  align-items: center;
+  margin-top: -20px;
   margin-left: 5%;
 }
 .section-mode .section-conten-mode .section-judul-mode img {
@@ -799,7 +811,6 @@ main section {
 .section-mode .section-conten-mode .section-h1-mode {
   font-size: 5vh;
   font-weight: 900;
-  font-family: "Righteous", cursive;
   color: #ff725e;
 }
 .section-mode .section-conten-mode .selecMode {
@@ -813,10 +824,9 @@ main section {
   border: 2px solid #418e6a;
   background-color: #5fd39d;
   box-shadow: -3px 4px 0px #abaaaa;
-  width: 150px;
+  width: 120px;
   padding: 10px;
   text-align: center;
-  font-family: "Vollkorn", serif;
   cursor: pointer;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -843,7 +853,6 @@ main section {
 .section-mode .section-conten-mode .section-container-mode {
   line-height: 1.5rem;
   padding-right: 10px;
-  font-family: "Sriracha", cursive;
   color: var(--clr-p-text);
   margin-bottom: 50px;
   margin-left: 5%;
@@ -865,7 +874,7 @@ main section {
   }
   .section-mode .line {
     height: 100%;
-    background-color: #161616;
+    background-color: rgba(11, 11, 11, 0.7960784314);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     flex: 1;
@@ -878,13 +887,13 @@ main section {
     position: absolute;
     width: 10px;
     height: 100%;
-    background-color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
   }
   .section-mode .line .line-two {
     width: 20px;
     height: 20px;
     rotate: 45deg;
-    background-color: black;
+    background-color: rgb(219, 219, 219);
     box-sizing: content-box;
     display: flex;
     justify-content: center;
@@ -952,7 +961,7 @@ main section {
 }
 .section-role .section-conten-role .section-judul-role h1 {
   font-size: 5vh;
-  font-family: "Righteous", cursive;
+  font-weight: 900;
   color: #ff725e;
 }
 .section-role .section-conten-role .section-judul-role img {
@@ -960,14 +969,12 @@ main section {
   margin-left: 10px;
 }
 .section-role .section-conten-role .section-p-role {
-  font-family: "Sriracha", cursive;
   color: var(--clr-p-text);
   font-size: 1.2rem;
   line-height: 1.7rem;
   font-weight: 700;
 }
 .section-role .section-conten-role .section-ul-role {
-  font-family: "Sriracha", cursive;
   color: var(--clr-p-text);
 }
 .section-role .section-conten-role .section-ul-role h1 {
@@ -988,7 +995,7 @@ main section {
   }
   .section-role .line {
     height: 100%;
-    background-color: #161616;
+    background-color: rgba(11, 11, 11, 0.7960784314);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     flex: 1;
@@ -1001,13 +1008,13 @@ main section {
     position: absolute;
     width: 10px;
     height: 100%;
-    background-color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
   }
   .section-role .line .line-two {
     width: 20px;
     height: 20px;
     rotate: 45deg;
-    background-color: black;
+    background-color: rgb(219, 219, 219);
     box-sizing: content-box;
     display: flex;
     justify-content: center;
@@ -1055,12 +1062,12 @@ main section {
 }
 .footer {
   width: 100%;
-  height: 40px;
   color: white;
   background-color: #1a212e;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .footer p {
   text-align: center;
