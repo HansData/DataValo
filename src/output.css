@@ -845,16 +845,6 @@ h2,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-violet-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
-}
-
-.bg-pink-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
-}
-
 .bg-cover {
   background-size: cover;
 }

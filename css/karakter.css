@@ -9,10 +9,10 @@ body {
 
 .container-main-karakter {
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh + 100px);
   position: relative;
-  background-color: aqua;
+  background-color: rgb(67, 67, 67);
   display: flex;
   overflow: hidden;
   background-image: url("../components/background/bg-valo-gelap.jpg");
@@ -24,14 +24,15 @@ body {
   width: 60%;
   height: 100%;
   display: flex;
+  padding-top: 100px;
 }
 .container-main-karakter .container-karakter .jenis-karakter {
   width: 35%;
-  position: relative;
   z-index: 9;
 }
 .container-main-karakter .container-karakter .jenis-karakter .garis-putih {
   position: absolute;
+  top: 0;
   width: 3px;
   background-color: rgba(137, 137, 137, 0.514);
   height: 100%;
@@ -107,7 +108,7 @@ body {
   justify-content: center;
 }
 .container-main-karakter .container-karakter .gambar-karakter img {
-  width: 800px;
+  min-width: 800px;
   position: absolute;
   margin-top: -40px;
   background-size: 65%;
@@ -205,8 +206,9 @@ body {
   padding: 10px;
   padding-top: 40px;
   background-color: rgba(202, 203, 203, 0.2);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding-top: 100px;
 }
 .container-main-karakter .container-statis-karakter .peran-karakter {
   position: relative;
@@ -219,10 +221,12 @@ body {
   position: absolute;
   margin-top: -20px;
   font-size: 1rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 .container-main-karakter .container-statis-karakter .h2-peran-karakter {
   font-size: 2rem;
   width: max-content;
+  font-weight: 700;
 }
 .container-main-karakter .container-statis-karakter .logo-role-agen {
   width: 25px;
@@ -297,6 +301,7 @@ body {
 .container-main-karakter .container-statis-karakter .ability-karakter h3 {
   margin-bottom: 15px;
   margin-left: 15px;
+  font-weight: 600;
 }
 .container-main-karakter .container-statis-karakter .ability-karakter p {
   position: relative;
@@ -326,6 +331,7 @@ body {
   position: absolute;
   margin-top: -25px;
   font-size: 1rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 @media (max-width: 1100px) {
@@ -334,10 +340,12 @@ body {
     overflow-y: auto;
     height: max-content;
     background-size: 100%;
+    padding-top: 100px;
   }
   .container-main-karakter .container-karakter {
     width: 100%;
     z-index: 10;
+    padding-top: 0;
   }
   .container-main-karakter .container-karakter .jenis-karakter {
     position: static;
@@ -347,15 +355,16 @@ body {
     margin-top: 160px;
   }
   .container-main-karakter .container-statis-karakter {
-    background-color: rgb(129, 130, 127);
+    background-color: rgb(127, 130, 130);
     width: 100%;
     padding: 50px;
     padding-top: 70px;
-    height: 500px;
+    min-height: 500px;
     background-image: url("../components/background/bg-statis-mobile.png");
     background-position: center;
     background-size: cover;
     color: white;
+    background-blend-mode: lighten;
   }
   .container-main-karakter .container-statis-karakter .peran-karakter {
     margin-bottom: 60px;
@@ -372,6 +381,7 @@ body {
   }
   .container-main-karakter .container-statis-karakter .ability-karakter p {
     font-size: 1.1rem;
+    padding-bottom: 20px;
   }
   .container-main-karakter .container-statis-karakter .ability-karakter::before {
     margin-top: -35px;
@@ -386,7 +396,7 @@ body {
     width: 100%;
   }
   .container-main-karakter .container-karakter .gambar-karakter img {
-    width: 600px;
+    min-width: 600px;
     margin-top: 0;
   }
   .container-main-karakter .container-slide {
