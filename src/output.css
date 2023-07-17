@@ -538,6 +538,40 @@ h2,
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .select-jenis-senjata {
   display: block;
   cursor: pointer;
@@ -553,6 +587,8 @@ h2,
 .select-jenis-senjata:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 .rotasi {
@@ -571,6 +607,37 @@ h2,
   border-right: 2px dashed;
   border-bottom: 2px solid;
   border-left: 2px solid;
+}
+
+.bg-logo-transparan {
+  background-image: url('../components/background/logo-tulisan-valorant-tranparan.png');
+  background-repeat: repeat-y;
+  background-size: 85%;
+  background-position-x: center;
+  background-blend-mode: overlay;
+}
+
+.bg-dekor-valo1 {
+  background-image: url('../components/background/dekorValo1.png');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.bg-dekor-valo3 {
+  background-image: url('../components/background/dekorValo3.png');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.before-dekor-card::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 0.5rem;
+  width: 0.5rem;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .absolute {
@@ -746,6 +813,10 @@ h2,
   overflow-y: scroll;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .border {
   border-width: 1px;
 }
@@ -825,6 +896,11 @@ h2,
   background-color: rgb(125 211 252 / var(--tw-bg-opacity));
 }
 
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
@@ -893,6 +969,10 @@ h2,
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pt-\[100px\] {
+  padding-top: 100px;
 }
 
 .font-dekorasi {
@@ -987,6 +1067,69 @@ h2,
 .bayangan2 {
   filter: drop-shadow(0.2rem 0.5rem 1px rgba(15, 25, 35, 0.17));
   -webkit-filter: drop-shadow(0.5rem 0.5rem 1px rgba(15, 25, 35, 0.17));
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-dekor-valo2 {
+    background-image: url('../components/background/dekorValo2.png');
+    background-repeat: repeat-y;
+    background-position: left;
+  }
+}
+
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:left-0::before {
+  content: var(--tw-content);
+  left: 0px;
+}
+
+.before\:top-0::before {
+  content: var(--tw-content);
+  top: 0px;
+}
+
+.before\:h-2::before {
+  content: var(--tw-content);
+  height: 0.5rem;
+}
+
+.before\:w-2::before {
+  content: var(--tw-content);
+  width: 0.5rem;
+}
+
+.before\:bg-red-400::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .hover\:border-dashed:hover {

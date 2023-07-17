@@ -18,6 +18,14 @@ $(window).ready(function () {
   $('.conten-weapon').on('click', '.image-senjata', function () {
     $(this).siblings('.data-senjata').toggleClass('h-[355px]')
   })
+
+
+  // ? bg parallax scroll
+  $(window).scroll(() => {
+    let scroll = window.scrollY
+    $('.container-main-weapon').css('background-position-y', `${scroll / 1.5}px`)
+  });
+
 })
 
 // !######################### bagian pengambilan data
@@ -26,7 +34,7 @@ $(window).ready(function () {
 function getCard(sumber) {
 
   return $('#conten-weapon').append(`
-   <div class="statis-senjata mb-5 lg:w-[49%] lg:mb-[2%]">
+   <div class="relative statis-senjata mb-5 lg:w-[49%] lg:mb-[2%] before-dekor-card">
      <div class="image-senjata  p-5 pb-10 box-border cursor-pointer hover:shadow-lg border-2 border-stone-300 hover:border-stone-400 group hover:border-dashed" data-uuid="${sumber.uuid}">
        <h2 class="nama-senjata font-semibold text-4xl p-6 font-judul md:text-5xl lg:text-6xl">${sumber.nama.toUpperCase()}</h2>
        <img class="block mx-auto bayangan group-hover:scale-110 group-hover:bayangan-hover transition-all" src="../components/image/${sumber.img}" alt="gambar senjata" />
