@@ -11,53 +11,49 @@
 
       .slick-current {
         background-color: red;
+        /* color: #8b978f; */
       }
     </style>
 
     <title>map</title>
   </head>
-  <body class="relative bg-violet-400">
-    <!-- ? decorasi padding kanan kiri -->
-    <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-stone-500 absolute"></div>
-    <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute"></div>
-    <main class="pt-28 pb-20">
+  <body class="min-w-[300px]">
+    <!-- ? bagian main -->
+    <main class="container-main-map relative pb-20 pt-[120px] bg-logo-transparan bg-slate-100 bg-top">
+      <!-- ? decorasi padding kanan kiri -->
+      <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-stone-500 absolute top-0 bg-dekor-valo3">
+        <div class="w-full h-full lg:bg-dekor-valo2"></div>
+      </div>
+      <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute top-0 bg-dekor-valo1"></div>
       <!-- ? keseluruhan conten map.html -->
       <section class="container-slide-map mr-[5%] ml-[5%] lg:ml-[7%] lg:mr-[7%] lg:relative">
-        <h1 class="text-5xl font-bold font-judul pl-2 md:text-7xl lg:text-9xl border-b-2 border-stone-500 border-dashed mb-2">PETA</h1>
+        <h1 class="text-5xl font-bold font-judul pl-2 md:text-7xl lg:text-9xl border-b-2 border-stone-500 mb-2">PETA</h1>
         <!-- ?slide ke 2 sebagai navigasi slide 1 -->
-        <section class="tes w-full lg:absolute bottom-0 z-10">
+        <section class="tes w-full lg:absolute bottom-0 z-20">
           <div class="slide w-full right-0 mx-auto">
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
-            <div class="border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
+            <div class="navigasi-slide-map"></div>
           </div>
         </section>
 
         <!-- ? keseluruhan slide pertama -->
-        <section class="main-slide flex items-center relative">
-          <div id="arrowPrev" class="h-[65px] w-[45px] hidden lg:block lg:bg-[url('../components/icon/button-previe.png')] bg-cover bg-center absolute left-0 cursor-pointer"></div>
-          <div id="arrowNext" class="h-[65px] w-[45px] hidden lg:block lg:bg-[url('../components/icon/button-next.png')] bg-cover bg-center absolute right-0 cursor-pointer"></div>
+        <section class="main-slide flex items-center relative after-dekor-map">
+          <div id="arrowPrev" class="arrow-slide-map lg:bg-[url('../components/icon/button-previe.png')] left-0"></div>
+          <div id="arrowNext" class="arrow-slide-map lg:bg-[url('../components/icon/button-next.png')] right-0"></div>
 
           <!-- ?isi gambar slide pertama -->
           <section id="slide-slick" class="slide-slick w-full lg:w-[80%] bg-sky-200/0 mx-auto">
-            <!-- <div class="conten-slick relative bg-slate-700">
-              <img class="lg:w-[100%]" src="../components/image/mapsplash.png" alt="" />
-
-              <div class="denah-map relative lg:absolute lg:bottom-0 lg:right-0 lg:w-48 lg:h-48 p-5 bg-white group lg:hover:w-full lg:hover:h-full lg:hover:bg-white/50 transition-all">
-                <span class="text-sm font-semibold absolute left-0 top-0 rotate-90 group-hover:text-lg">01</span>
-                <h3 class="text-base font-semibold mb-2.5 group-hover:text-4xl group-hover:ml-5">LOTUS</h3>
-                <img class="lg:w-[80%] group-hover:lg:w-1/2 bayangan2 border-2 border-stone-600 border-dashed mx-auto" src="../components/image/denahMap.png" alt="" />
-              </div>
-            </div> -->
+            <!-- ! bagian card peta -->
           </section>
         </section>
       </section>

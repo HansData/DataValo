@@ -67,6 +67,23 @@
   .before-dekor-card {
     @apply before:w-2 before:h-2 before:bg-red-400 before:absolute before:top-0 before:left-0;
   }
+
+  .after-dekor-map {
+    /* @apply after:bg-sky-300 */
+    background: linear-gradient(90deg, rgba(62, 62, 62, 1) 0%, rgba(249, 249, 249, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(62, 62, 62, 1) 100%);
+  }
+
+  .navigasi-slide-map {
+    @apply border border-gray-500 mr-1 w-4 lg:w-6 h-1.5 lg:h-2;
+  }
+
+  .arrow-slide-map {
+    @apply h-[65px] w-[45px] hidden lg:block bg-cover bg-center absolute cursor-pointer;
+  }
+
+  .dekor-slide-map {
+    @apply absolute bg-white/50  before:absolute  before:bg-white after:absolute  after:bg-white;
+  }
 }
 
 @layer utilities {
