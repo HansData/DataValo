@@ -13,7 +13,7 @@ body {
 .container-main-karakter {
   box-sizing: border-box;
   width: 100%;
-  height: calc(100vh + 100px);
+  height: calc(100vh + 150px);
   position: relative;
   background-color: rgb(67, 67, 67);
   display: flex;
@@ -425,6 +425,7 @@ body {
     .container-slide {
       position: relative;
       margin-top: 160px;
+      z-index: 20;
     }
 
     .container-statis-karakter {

@@ -1,7 +1,14 @@
 // ! svg main game
 $(document).ready(function () {
 
-  $("#svgPlayGame").html(`<svg class="animated" id="freepik_stories-gaming" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
+  $('#profil').click(() => {
+    $('#header-container').load("../public/profil.html #main-about", function () {
+      getSvg()
+    });
+  });
+
+  function getSvg() {
+    $("#svgPlayGame").html(`<svg class="animated" id="freepik_stories-gaming" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
     <g id="freepik--Floor--inject-35" class="animable" style="transform-origin: 249.53px 345.84px">
       <ellipse id="freepik--floor--inject-35" cx="249.53" cy="345.84" rx="231.15" ry="133.46" style="fill: rgb(245, 245, 245); transform-origin: 249.53px 345.84px" class="animable"></ellipse>
     </g>
@@ -544,7 +551,7 @@ $(document).ready(function () {
     </defs>
   </svg>`)
 
-  $("#svgQuestion").html(`<svg class="animated" id="freepik_stories-questions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
+    $("#svgQuestion").html(`<svg class="animated" id="freepik_stories-questions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
     <g id="freepik--background-complete--inject-3" class="animable animator-hidden" style="transform-origin: 256.551px 251.69px">
       <path
         d="M278.44,462.06c-17.24-8.16-24.11-27.56-26.54-45.63-.41-3-1.27-6.12-.29-9s4-5.23,6.9-4.42c2.41.67,3.82,3.09,5.43,5a17.66,17.66,0,0,0,8.16,5.52c2.08.67,4.55.88,6.26-.48,2.34-1.87,2-5.49,1.52-8.47Q278.41,396.29,277,388a28.24,28.24,0,0,1-.59-9c.44-3,2.05-6,4.75-7.24s6.49-.23,7.58,2.59a28.31,28.31,0,0,1,.72,3.69c.29,1.23,1.1,2.5,2.33,2.65s2.3-.9,3.05-1.93c2.56-3.53,4-7.76,5.3-11.95s2.52-8.46,4.76-12.22,5.66-7,9.89-8,9.23.9,11,4.91.06,8.7-2,12.56A67.69,67.69,0,0,1,312.1,379.6a5.57,5.57,0,0,0-1.9,2.88c-.31,2.1,1.91,3.76,4,4.08,2.34.36,4.72-.28,7.09-.4s5.06.48,6.32,2.53c1.73,2.84-.28,6.47-2.43,9a58,58,0,0,1-15.23,12.6c-2.06,1.17-4.25,2.27-5.76,4.11s-2.12,4.7-.7,6.62,4.29,2.13,6.51,1.31,4.07-2.41,6.12-3.6c3.84-2.24,9.18-2.86,12.41.24a9.56,9.56,0,0,1,2.41,8.18,21.93,21.93,0,0,1-3.27,8.13,58.26,58.26,0,0,1-21.58,21.36c-8.95,4.9-17.61,7.29-27.64,5.43"
@@ -1154,5 +1161,9 @@ $(document).ready(function () {
       </filter>
     </defs>
   </svg>`)
+
+  }
+
+  getSvg()
 
 })

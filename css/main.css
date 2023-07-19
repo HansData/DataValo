@@ -200,13 +200,13 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  font-weight: 700;
-  font-family: "Sriracha", cursive;
+  font-weight: 500;
   padding: 10px;
 }
 .navigasi .nav-servis .ul-servis .servis a {
   text-decoration: none;
   color: var(--clr-text-nav);
+  cursor: pointer;
 }
 .navigasi .nav-servis .ul-servis .active {
   border-bottom: 4px solid rgb(32, 255, 255);
@@ -285,6 +285,7 @@ body {
     top: 0;
     left: 100vw;
     right: 0;
+    z-index: 15;
     display: flex;
     justify-content: end;
     backdrop-filter: blur(5px);
@@ -301,7 +302,9 @@ body {
     height: 100%;
     right: 0;
     top: 0;
-    justify-content: center;
+    gap: 0;
+    padding-top: 100px;
+    justify-content: space-evenly;
     align-items: center;
     background-color: rgb(31, 31, 31);
   }
@@ -310,13 +313,13 @@ body {
   }
   .navigasi .nav-servis .icon-mode {
     margin-left: 65vw;
-    z-index: 9;
+    z-index: 20;
   }
   .navigasi .burger {
     width: 50px;
     height: 50px;
     display: flex;
-    z-index: 9;
+    z-index: 20;
     background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
@@ -494,52 +497,52 @@ body {
   grid-area: bt-6;
 }
 
-.bt-1:hover ~ button {
+.bt-1:hover ~ #btn-explor {
   transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
   box-shadow: -2px -2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-1:hover ~ button::after {
+.bt-1:hover ~ #btn-explor::after {
   animation: shake 0.5s ease-in-out 0.3s;
   text-shadow: -2px -2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-3:hover ~ button {
+.bt-3:hover ~ #btn-explor {
   transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
   box-shadow: 2px -2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-3:hover ~ button::after {
+.bt-3:hover ~ #btn-explor::after {
   animation: shake 0.5s ease-in-out 0.3s;
   text-shadow: 2px -2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-4:hover ~ button {
+.bt-4:hover ~ #btn-explor {
   transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
   box-shadow: -2px 2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-4:hover ~ button::after {
+.bt-4:hover ~ #btn-explor::after {
   animation: shake 0.5s ease-in-out 0.3s;
   text-shadow: -2px 2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-6:hover ~ button {
+.bt-6:hover ~ #btn-explor {
   transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
   box-shadow: 2px 2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.bt-6:hover ~ button::after {
+.bt-6:hover ~ #btn-explor::after {
   animation: shake 0.5s ease-in-out 0.3s;
   text-shadow: 2px 2px rgba(24, 24, 24, 0.5333333333);
 }
 
-.hover:hover ~ button::before {
+.hover:hover ~ #btn-explor::before {
   background: transparent;
   border: 0;
 }
 
-.hover:hover ~ button::after {
+.hover:hover ~ #btn-explor::after {
   content: "Let's Go";
   top: -150%;
   font-family: "Sriracha", cursive;
@@ -549,7 +552,7 @@ body {
   color: #f19c2b;
 }
 
-button {
+#btn-explor {
   position: absolute;
   padding: 0;
   width: 135px;
@@ -562,7 +565,7 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-button::before {
+#btn-explor::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -576,7 +579,7 @@ button::before {
   border: 3px solid #f39923;
 }
 
-button::after {
+#btn-explor::after {
   content: "Explore";
   font-family: "Sriracha", cursive;
   font-weight: 900;
