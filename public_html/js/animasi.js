@@ -1,0 +1,5 @@
+$('#conten.')
+
+function animasi1() {
+
+}
