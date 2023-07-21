@@ -12,31 +12,31 @@
   </head>
   <body class="::-webkit-scrollbar ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb:hover min-w-[300px] scroll-smooth">
     <!-- ? bagian pembungkus main -->
-    <main id="main-weapon" class="relative container-main-weapon flex h-full min-w-[300px] max-w-[1500px] mx-auto pb-32 pt-[100px] bg-logo-transparan bg-slate-100">
+    <main id="main-weapon" class="container-main-weapon bg-logo-transparan relative mx-auto flex h-full min-w-[300px] max-w-[1500px] bg-bgTerang pb-32 pt-[100px]">
       <!-- ? dekorasi bagian kanan dan kiri  -->
-      <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-solid border-stone-500 absolute top-0 bg-dekor-valo3">
-        <div class="w-full h-full lg:bg-dekor-valo2"></div>
+      <div class="decorasi-padding-kiri bg-dekor-valo3 absolute left-0 top-0 h-full w-[5%] border-r-2 border-solid border-stone-500 lg:w-[7%]">
+        <div class="lg:bg-dekor-valo2 h-full w-full"></div>
       </div>
-      <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute top-0 bg-dekor-valo1"></div>
+      <div class="decorasi-padding-kanan bg-dekor-valo1 absolute right-0 top-0 h-full w-[5%] lg:w-[7%]"></div>
 
       <!-- ? container conten keseluruhan -->
-      <div class="container-section w-full mr-[5%] ml-[5%] lg:ml-[7%] lg:mr-[7%]">
+      <div class="container-section ml-[5%] mr-[5%] w-full lg:ml-[7%] lg:mr-[7%]">
         <!-- ? container judul dan form select -->
-        <section class="lg:flex pt-5">
+        <section class="pt-5 lg:flex">
           <!-- ?judul -->
-          <div class="judul-weapon py-5 lg:flex-auto h-max">
-            <h1 class="text-6xl font-bold pl-2 font-judul lg:text-[6.5rem] border-b-2 border-stone-500 border-solid">CARI SENJATAMU.</h1>
+          <div class="judul-weapon h-max py-5 lg:flex-auto">
+            <h1 class="border-b-2 border-solid border-stone-500 pl-2 font-judul text-6xl font-bold lg:text-[6.5rem]">CARI SENJATAMU.</h1>
           </div>
 
           <!-- ?form select -->
-          <div id="form-select" class="relative mb-10 h-max lg:flex-1 lg:mb-20 lg:mt-32 lg:min-w-[400px] z-10">
-            <div id="category" class="relative flex items-center cursor-pointer border-campuran border-slate-600 shadow-lg">
-              <span class="senjata-active text-lg block font-semibold p-5 font-subJudul">SEMUA SENJATA</span>
-              <img id="img-select" class="h-14 block absolute right-0 transition-all" src="../components/icon/down-arrow.png" alt="" />
+          <div id="form-select" class="relative z-10 mb-10 h-max lg:mb-20 lg:mt-32 lg:min-w-[400px] lg:flex-1">
+            <div id="category" class="border-campuran relative flex cursor-pointer items-center border-slate-600 shadow-lg">
+              <span class="senjata-active block p-5 font-subJudul text-lg font-semibold">SEMUA SENJATA</span>
+              <img id="img-select" class="absolute right-0 block h-14 transition-all" src="../components/icon/down-arrow.png" alt="" />
             </div>
 
             <!-- ?pilihan kategory -->
-            <div id="select-senjata" class="flex-col absolute h-0 w-full overflow-y-scroll bg-green-400 top-0 mt-[72px] divide-y transition-all divide-solid">
+            <div id="select-senjata" class="absolute top-0 mt-[72px] h-0 w-full flex-col divide-y divide-solid overflow-y-scroll bg-green-400 transition-all">
               <span class="select-jenis-senjata hidden" data-category="semua senjata">SEMUA SENJATA</span>
               <span class="select-jenis-senjata" data-category="Heavy Weapons">SENJATA BERAT</span>
               <span class="select-jenis-senjata" data-category="Rifles">SENAPAN SERBU</span>
@@ -50,7 +50,7 @@
         </section>
 
         <!-- ?pembungkus card senjata -->
-        <section id="conten-weapon" class="conten-weapon lg:flex lg:justify-between lg:flex-wrap box-border">
+        <section id="conten-weapon" class="conten-weapon box-border lg:flex lg:flex-wrap lg:justify-between">
           <!-- ! bagian card -->
         </section>
       </div>

@@ -7,7 +7,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  // color: #ff4655;
 }
 
 .container-main-karakter {
@@ -15,13 +14,11 @@ body {
   width: 100%;
   height: calc(100vh + 150px);
   position: relative;
-  background-color: rgb(67, 67, 67);
   display: flex;
   overflow: hidden;
   background-image: url('../components/background/bg-valo-gelap.jpg');
   background-position: center;
   background-size: cover;
-  color: rgb(206, 206, 206); // ! ############### nanti dimasukkan ke dlam varibel
 
   // !##########################
   // ? bagian gambar karakter
@@ -64,7 +61,7 @@ body {
           p {
             margin-left: 20px;
             font-weight: 700;
-            color: rgb(97, 78, 57);
+            color: #ef4444;
             transition: all 0.3s linear;
             -webkit-transition: all 0.3s linear;
             -moz-transition: all 0.3s linear;
@@ -255,7 +252,7 @@ body {
     z-index: 9;
     padding: 10px;
     padding-top: 40px;
-    background-color: rgba(202, 203, 203, 0.2); //! ############## efek blur
+    background-color: rgba(255, 255, 255, 0.5); //! ############## efek blur
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding-top: 100px;
@@ -303,7 +300,8 @@ body {
         .logo-ability {
           width: 70px;
           height: 70px;
-          border: 2px solid rgba(189, 189, 189, 0.3); //! ???????????? masukan ke variabel warna
+          border: 2px solid rgba(189, 189, 189, 0.3);
+          box-shadow: 2px 2px 3px rgb(58, 58, 58);
           cursor: pointer;
           margin-top: 20px;
           position: relative;
@@ -367,6 +365,7 @@ body {
         margin-bottom: 15px;
         margin-left: 15px;
         font-weight: 600;
+        font-size: 1.3rem;
       }
 
       p {

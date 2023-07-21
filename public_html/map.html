@@ -19,23 +19,23 @@
   </head>
   <body class="min-w-[300px]">
     <!-- ? bagian main -->
-    <main id="main-map" class="container-main-map relative pb-20 pt-[120px] bg-logo-transparan bg-slate-100 bg-top">
+    <main id="main-map" class="container-main-map bg-logo-transparan relative bg-bgTerang bg-top pb-20 pt-[120px]">
       <style>
         .slick-current {
           background-color: red;
         }
       </style>
       <!-- ? decorasi padding kanan kiri -->
-      <div class="decorasi-padding-kiri w-[5%] lg:w-[7%] h-full left-0 border-r-2 border-solid border-stone-500 absolute top-0 bg-dekor-valo3">
-        <div class="w-full h-full lg:bg-dekor-valo2"></div>
+      <div class="decorasi-padding-kiri bg-dekor-valo3 absolute left-0 top-0 h-full w-[5%] border-r-2 border-solid border-stone-500 lg:w-[7%]">
+        <div class="lg:bg-dekor-valo2 h-full w-full"></div>
       </div>
-      <div class="decorasi-padding-kanan w-[5%] lg:w-[7%] h-full right-0 absolute top-0 bg-dekor-valo1"></div>
+      <div class="decorasi-padding-kanan bg-dekor-valo1 absolute right-0 top-0 h-full w-[5%] lg:w-[7%]"></div>
       <!-- ? keseluruhan conten map.html -->
-      <section class="container-slide-map mr-[5%] ml-[5%] lg:ml-[7%] lg:mr-[7%] lg:relative">
-        <h1 class="text-5xl font-bold font-judul pl-2 md:text-7xl lg:text-9xl border-b-2 border-solid border-stone-500 mb-2">PETA</h1>
+      <section class="container-slide-map ml-[5%] mr-[5%] lg:relative lg:ml-[7%] lg:mr-[7%]">
+        <h1 class="mb-2 border-b-2 border-solid border-stone-500 pl-2 font-judul text-5xl font-bold md:text-7xl lg:text-9xl">PETA</h1>
         <!-- ?slide ke 2 sebagai navigasi slide 1 -->
-        <section class="tes w-full lg:absolute bottom-0 z-20">
-          <div class="slide w-full right-0 mx-auto">
+        <section class="tes bottom-0 z-20 w-full lg:absolute">
+          <div class="slide right-0 mx-auto w-full">
             <div class="navigasi-slide-map"></div>
             <div class="navigasi-slide-map"></div>
             <div class="navigasi-slide-map"></div>
@@ -52,12 +52,12 @@
         </section>
 
         <!-- ? keseluruhan slide pertama -->
-        <section class="main-slide flex items-center relative after-dekor-map">
-          <div id="arrowPrev" class="arrow-slide-map lg:bg-[url('../components/icon/button-previe.png')] left-0"></div>
-          <div id="arrowNext" class="arrow-slide-map lg:bg-[url('../components/icon/button-next.png')] right-0"></div>
+        <section class="main-slide after-dekor-map relative flex items-center">
+          <div id="arrowPrev" class="arrow-slide-map left-0 lg:bg-[url('../components/icon/button-previe.png')]"></div>
+          <div id="arrowNext" class="arrow-slide-map right-0 lg:bg-[url('../components/icon/button-next.png')]"></div>
 
           <!-- ?isi gambar slide pertama -->
-          <section id="slide-slick" class="slide-slick w-full lg:w-[80%] bg-sky-200/0 mx-auto">
+          <section id="slide-slick" class="slide-slick mx-auto w-full bg-sky-200/0 lg:w-[80%]">
             <!-- ! bagian card peta -->
           </section>
         </section>

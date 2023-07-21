@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../src/output.css" />
     <!-- ! font -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&family=Fira+Sans+Condensed:wght@500&family=Karma:wght@600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bebas+Neue&family=Fira+Sans+Condensed:wght@500&family=Karma:wght@600&display=swap');
     </style>
 
     <!-- ! icon footer -->
@@ -26,8 +26,8 @@
 
     <title>Ahmad-Raihan-Web.id</title>
   </head>
-  <body id="body" class="::-webkit-scrollbar ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb:hover min-w-[300px] scroll-smooth">
-    <nav class="navigasi">
+  <body id="body" class="::-webkit-scrollbar ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb:hover min-w-[300px] scroll-smooth bg-bgTerang text-textTerang">
+    <nav class="navigasi nav-fix">
       <div class="logo">
         <a href="#body">
           <img src="../components/logo/logo.png" alt="logo web" />
@@ -70,7 +70,7 @@
 
           <div class="conten-judul">
             <div class="conten-decoration">
-              <h1 id="conten-h1" class="conten-h1 font-judul">Game Favorite</h1>
+              <h1 class="conten-h1 font-judul">Game Favorite</h1>
               <div class="img-underline">
                 <img class="underline" src="../components/icon/undraw_curved-underline.svg" alt="garis bawah" />
               </div>
@@ -101,7 +101,7 @@
 
         <section>
           <section class="text-valorant">
-            <h1 class="h1-valorant font-dekorasi">VALORANT</h1>
+            <h1 id="h1-valorant" class="h1-valorant font-dekorasi">VALORANT</h1>
           </section>
           <section class="section-aboutGame">
             <div class="line">
@@ -197,7 +197,6 @@
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="../javascript/index.js"></script>
-    <script src="../javascript/imgSvg.js"></script>
     <!-- ! javascrip bagian karakter -->
     <script src="../slick-slide/slick/slick.min.js"></script>
     <script src="../javascript/karakter.js"></script>
@@ -205,6 +204,8 @@
     <script src="js/weapon.js"></script>
     <!-- !javascrip bagian map -->
     <script src="js/map.js"></script>
-    <script src="js/animasi.js"></script>
+    <!-- !javascrip bagian author -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/author.js"></script>
   </body>
 </html>

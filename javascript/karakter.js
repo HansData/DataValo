@@ -1,6 +1,6 @@
 
 $('#character').click(() => {
-    $('#header-container').load("../public/character.html #main-character", function () {
+    $('#header-container').load("../public_html/character.html #main-character", function () {
 
         // ! mengambil data dari valorant API
 
