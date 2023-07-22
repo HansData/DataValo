@@ -250,7 +250,7 @@ body {
     -o-transform: rotate(20deg);
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .navigasi {
     justify-content: space-around;
     padding-right: 0;
@@ -409,9 +409,6 @@ body {
     flex: 1;
     padding: 60px 100px;
     height: max-content;
-    background-image: url("../components/background/bg-2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 80%;
     gap: 40px;
   }

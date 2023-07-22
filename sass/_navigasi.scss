@@ -72,7 +72,6 @@ body {
       }
 
       .servis:hover {
-        // text-shadow: 0px 0px 5px rgb(0, 172, 135), 0px 0px 15px rgb(0, 172, 135);
         text-shadow: 0px 0px 15px rgb(226, 133, 254), 0px 0px 30px rgb(226, 133, 254);
       }
     }
@@ -137,7 +136,7 @@ body {
 
 // ! bagian responsif navbar
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .navigasi {
     justify-content: space-around;
     padding-right: 0;

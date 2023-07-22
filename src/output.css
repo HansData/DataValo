@@ -1447,6 +1447,11 @@ h2,
   color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
+.text-textGelap {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
 .text-textTerang {
   --tw-text-opacity: 1;
   color: rgb(24 24 27 / var(--tw-text-opacity));
@@ -1973,6 +1978,10 @@ h2,
     padding-top: 15rem;
   }
 
+  .lg\:text-center {
+    text-align: center;
+  }
+
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1994,6 +2003,16 @@ h2,
 
   .lg\:font-semibold {
     font-weight: 600;
+  }
+
+  .lg\:text-textTerang {
+    --tw-text-opacity: 1;
+    color: rgb(24 24 27 / var(--tw-text-opacity));
+  }
+
+  .lg\:text-textGelap {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity));
   }
 
   .lg\:hover\:h-full:hover {
@@ -2024,5 +2043,20 @@ h2,
   .group:hover .group-hover\:lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  :is(.dark .lg\:dark\:text-fuchsia-500) {
+    --tw-text-opacity: 1;
+    color: rgb(217 70 239 / var(--tw-text-opacity));
+  }
+
+  :is(.dark .dark\:lg\:text-textGelap) {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity));
+  }
+
+  :is(.dark .dark\:lg\:text-textTerang) {
+    --tw-text-opacity: 1;
+    color: rgb(24 24 27 / var(--tw-text-opacity));
   }
 }

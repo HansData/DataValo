@@ -40,8 +40,10 @@ function getJsProfil() {
     $(window).scroll(() => {
       if (window.scrollY > 50) {
         $('.navigasi').addClass('nav-scroll').removeClass('nav-fix')
+        $('.ul-servis').addClass('dark:lg:text-textTerang')
       } else {
         $('.navigasi').removeClass('nav-scroll').addClass('nav-fix')
+        $('.ul-servis').removeClass('dark:lg:text-textTerang')
       }
     })
 
