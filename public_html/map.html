@@ -19,7 +19,7 @@
   </head>
   <body class="min-w-[300px]">
     <!-- ? bagian main -->
-    <main id="main-map" class="container-main-map bg-logo-transparan relative bg-bgTerang bg-top pb-20 pt-[120px]">
+    <main id="main-map" class="container-main-map bg-logo-transparan relative bg-bgTerang bg-top pb-20 pt-[120px] dark:bg-bgGelap dark:bg-blend-color">
       <style>
         .slick-current {
           background-color: red;
@@ -32,7 +32,9 @@
       <div class="decorasi-padding-kanan bg-dekor-valo1 absolute right-0 top-0 h-full w-[5%] lg:w-[7%]"></div>
       <!-- ? keseluruhan conten map.html -->
       <section class="container-slide-map ml-[5%] mr-[5%] lg:relative lg:ml-[7%] lg:mr-[7%]">
-        <h1 class="mb-2 border-b-2 border-solid border-stone-500 pl-2 font-judul text-5xl font-bold md:text-7xl lg:text-9xl">PETA</h1>
+        <div class="mb-2 overflow-y-hidden border-b-2 border-solid border-stone-500">
+          <h1 data-aos="fade-up" class="pl-2 font-judul text-5xl font-bold text-textTerang dark:text-textGelap md:text-7xl lg:text-9xl">PETA</h1>
+        </div>
         <!-- ?slide ke 2 sebagai navigasi slide 1 -->
         <section class="tes bottom-0 z-20 w-full lg:absolute">
           <div class="slide right-0 mx-auto w-full">

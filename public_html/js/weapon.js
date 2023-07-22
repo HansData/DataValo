@@ -1,50 +1,68 @@
 
+if (localStorage.halaman === 'weapon') {
+  $(".servis").removeClass("active");
+  $("#weapon").addClass("active");
+  $('#header-container').load("weapon.html #main-weapon", function () {
+    getHalamanWeapon()
+  });
+}
+
+
 $('#weapon').click(() => {
   $('#header-container').load("weapon.html #main-weapon", function () {
-
-    // !########################## bagian start
-
-    $(window).ready(function () {
-
-      $('#form-select').click(function () {
-        $('#select-senjata').toggleClass('h-52').toggleClass('h-0')
-        $('#img-select').toggleClass('rotasi');
-      })
+    getHalamanWeapon()
+    localStorage.halaman = 'weapon'
+  })
+});
 
 
-      $('#form-select').on('click', '.select-jenis-senjata', function () {
-        const jenis = $(this).html();
-        $('.senjata-active').html(jenis)
-        $('.select-jenis-senjata').removeClass('hidden')
-        $(this).addClass('hidden')
-      })
+// !########################## bagian start
 
-      // ?##################### ketika card di click
-
-      $('.conten-weapon').on('click', '.image-senjata', function () {
-        $(this).siblings('.data-senjata').toggleClass('h-[355px]')
-      })
+function getHalamanWeapon() {
 
 
-      // ? bg parallax scroll
-      $(window).scroll(() => {
-        let scroll = window.scrollY
-        $('.container-main-weapon').css('background-position-y', `${scroll / 1.5}px`)
-      });
 
+  $(window).ready(function () {
 
+    $('#form-select').click(function () {
+      $('#select-senjata').toggleClass('h-52').toggleClass('h-0')
+      $('#img-select').toggleClass('rotasi');
     })
 
-    // !######################### bagian pengambilan data
+
+    $('#form-select').on('click', '.select-jenis-senjata', function () {
+      const jenis = $(this).html();
+      $('.senjata-active').html(jenis)
+      $('.select-jenis-senjata').removeClass('hidden')
+      $(this).addClass('hidden')
+    })
+
+    // ?##################### ketika card di click
+
+    $('.conten-weapon').on('click', '.image-senjata', function () {
+      $(this).siblings('.data-senjata').toggleClass('h-[355px]')
+    })
 
 
-    function getCard(sumber) {
+    // ? bg parallax scroll
+    $(window).scroll(() => {
+      let scroll = window.scrollY
+      $('.container-main-weapon').css('background-position-y', `${scroll / 1.5}px`)
+    });
 
-      return $('#conten-weapon').append(`
-   <div class="relative statis-senjata mb-5 lg:w-[49%] lg:mb-[2%] before-dekor-card">
+
+  })
+
+  // !######################### bagian pengambilan data
+
+
+  function getCard(sumber) {
+
+    return $('#conten-weapon').append(`
+   <div class="relative statis-senjata mb-5 lg:w-[49%] lg:mb-[2%] before-dekor-card dark:bg-slate-200/40 h-max">
      <div class="image-senjata  p-5 pb-10 box-border cursor-pointer hover:shadow-lg border-2 border-stone-300 border-solid hover:border-stone-400 group hover:border-dashed" data-uuid="${sumber.uuid}">
-       <h2 class="nama-senjata font-semibold text-4xl p-6 font-judul md:text-5xl lg:text-6xl">${sumber.nama.toUpperCase()}</h2>
-       <img class="block mx-auto bayangan group-hover:scale-110 group-hover:bayangan-hover transition-all" src="../components/image/${sumber.img}" alt="gambar senjata" />
+       <h2 data-aos="fade-up" class="nama-senjata font-semibold text-4xl p-6 font-judul md:text-5xl lg:text-6xl text-textTerang dark:text-textGelap">${sumber.nama.toUpperCase()}</h2>
+       <img data-aos="fade-down" class="block mx-auto bayangan group-hover:scale-110 group-hover:bayangan-hover transition-all " src="../components/image/${sumber.img}" alt="gambar senjata" />
    </div>
 
  <div class="data-senjata bg-slate-300  overflow-hidden  h-0 transition-all">
@@ -87,65 +105,63 @@ $('#weapon').click(() => {
 
  </div>
     `)
-    }
+  }
 
-    // ? ############################### pengambilan json pertama
+  // ? ############################### pengambilan json pertama
 
-    function getWeapon() {
-      $.getJSON('../json/imageSenjata.json', result => {
-        const dataSenjata = result.senjata;
-        $.each(dataSenjata, (index, elemen) => {
+  function getWeapon() {
+    $.getJSON('../json/imageSenjata.json', result => {
+      const dataSenjata = result.senjata;
+      $.each(dataSenjata, (index, elemen) => {
 
-          // ? ######### card
-          getCard(elemen)
+        // ? ######### card
+        getCard(elemen)
 
-        })
-
-
-      })
-    }
-
-    getWeapon()
-
-    // ? ############################## ketika jenis senjata di click
-
-    $('#form-select').on('click', '.select-jenis-senjata', function () {
-      let jenis = $(this).data('category').toLowerCase();
-
-      // ? kosongkan isisnya
-      $('#conten-weapon').html('')
-
-      // ? jika pilih semua senjata
-      if (jenis == "semua senjata") {
-        return getWeapon()
-
-      }
-
-
-      $.getJSON('../json/imageSenjata.json', result => {
-        const dataSenjata = result.senjata;
-        const jenisSenjata = [];
-
-        // ?simpan data sesuai categoty
-        $.each(dataSenjata, (index, elemen) => {
-
-          if (jenis == elemen.category.toLowerCase()) {
-            jenisSenjata.push(elemen)
-          }
-        })
-
-        $.each(jenisSenjata, (index, elemen) => {
-          // ? ############ card
-
-          getCard(elemen)
-        })
       })
 
 
     })
+  }
+
+  getWeapon()
+
+  // ? ############################## ketika jenis senjata di click
+
+  $('#form-select').on('click', '.select-jenis-senjata', function () {
+    let jenis = $(this).data('category').toLowerCase();
+
+    // ? kosongkan isisnya
+    $('#conten-weapon').html('')
+
+    // ? jika pilih semua senjata
+    if (jenis == "semua senjata") {
+      return getWeapon()
+
+    }
 
 
-    // !######################### bagian end
+    $.getJSON('../json/imageSenjata.json', result => {
+      const dataSenjata = result.senjata;
+      const jenisSenjata = [];
+
+      // ?simpan data sesuai categoty
+      $.each(dataSenjata, (index, elemen) => {
+
+        if (jenis == elemen.category.toLowerCase()) {
+          jenisSenjata.push(elemen)
+        }
+      })
+
+      $.each(jenisSenjata, (index, elemen) => {
+        // ? ############ card
+
+        getCard(elemen)
+      })
+    })
+
 
   })
-});
+
+
+  // !######################### bagian end
+}

@@ -1,8 +1,34 @@
 
+
+// localStorage.clear()
+// ?##################### halaman load
+if (localStorage.halaman === 'profil') {
+  $(".servis").removeClass("active");
+  $("#profil").addClass("active");
+  $('#header-container').load("../public_html/profil.html #main-about", function () {
+    getJsProfil()
+
+  });
+
+}
+
+// ?#### ketika navbarnya diclick
 $('#profil').click(() => {
   $('#header-container').load("../public_html/profil.html #main-about", function () {
     getJsProfil()
+    localStorage.halaman = 'profil'
   });
+});
+
+// ?######### configrasi animasi scroll
+AOS.init({
+  offset: 120,
+  delay: 0,
+  duration: 400,
+  easing: 'ease',
+  once: false,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
 });
 
 
@@ -51,7 +77,9 @@ function getJsProfil() {
     $(`${elemen}`).html('')
     for (let huruf of string) {
       $('#h1-valorant').append(`
-        <span class="block md:border-2 md:border-red-700 md:border-solid md:w-[10vw] hover:text-sky-600 md:bg-black/50 md:backdrop-blur-sm hover:md:-translate-y-6 hover:md:bg-black/90 transition-all cursor-default">${huruf}</span>
+        <div data-aos="flip-left" class="group">
+        <span class="block md:border-2 md:border-red-700 md:border-solid md:w-[10vw] group-hover:text-sky-600 md:bg-black/50 md:backdrop-blur-sm group-hover:md:-translate-y-6 group-hover:md:bg-black/90 transition-all cursor-default">${huruf}</span>
+        </div>
         `)
 
 
@@ -72,6 +100,15 @@ getJsProfil()
 // ? awal navbar
 $(document).ready(function () {
 
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    $("#img-mode").attr("src", "../components/icon/sun.png")
+  } else {
+
+    $("#img-mode").attr("src", "../components/icon/moon.png")
+  }
+
+
+  // !###################
   $('.a-nav').click(function (even) {
     even.preventDefault()
   })
@@ -83,11 +120,15 @@ $(document).ready(function () {
 
 
   $(".icon-mode").click(function () {
-    $("body").toggleClass("dark-mode");
-    if ($("body").hasClass("dark-mode")) {
+    $("html").toggleClass("dark");
+    if ($("html").hasClass("dark")) {
       $("#img-mode").attr("src", "../components/icon/sun.png")
+      $('html').addClass('dark')
+      localStorage.theme = 'dark'
     } else {
       $("#img-mode").attr("src", "../components/icon/moon.png")
+      $('html').removeClass('dark')
+      localStorage.theme = 'light'
     }
 
   })

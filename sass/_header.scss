@@ -3,7 +3,6 @@
   box-sizing: content-box;
   padding: 20px 0;
   height: max(100vh, max-content);
-  background: var(--clr-bg-gradasi);
   box-sizing: border-box;
   min-height: 844px;
 
@@ -22,7 +21,6 @@
     .conten-h1 {
       font-size: 2.4rem;
       font-weight: 700;
-      color: var(--clr-h1-text);
     }
 
     .img-underline {
@@ -49,7 +47,6 @@
     .conten-p {
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--clr-p-text);
       line-height: 1.5rem;
     }
 

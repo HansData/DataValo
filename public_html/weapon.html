@@ -12,7 +12,7 @@
   </head>
   <body class="::-webkit-scrollbar ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb:hover min-w-[300px] scroll-smooth">
     <!-- ? bagian pembungkus main -->
-    <main id="main-weapon" class="container-main-weapon bg-logo-transparan relative mx-auto flex h-full min-w-[300px] max-w-[1500px] bg-bgTerang pb-32 pt-[100px]">
+    <main id="main-weapon" class="container-main-weapon bg-logo-transparan relative mx-auto flex h-full min-w-[300px] max-w-[1500px] bg-bgTerang pb-32 pt-[100px] dark:bg-bgGelap dark:bg-blend-color">
       <!-- ? dekorasi bagian kanan dan kiri  -->
       <div class="decorasi-padding-kiri bg-dekor-valo3 absolute left-0 top-0 h-full w-[5%] border-r-2 border-solid border-stone-500 lg:w-[7%]">
         <div class="lg:bg-dekor-valo2 h-full w-full"></div>
@@ -24,14 +24,14 @@
         <!-- ? container judul dan form select -->
         <section class="pt-5 lg:flex">
           <!-- ?judul -->
-          <div class="judul-weapon h-max py-5 lg:flex-auto">
-            <h1 class="border-b-2 border-solid border-stone-500 pl-2 font-judul text-6xl font-bold lg:text-[6.5rem]">CARI SENJATAMU.</h1>
+          <div class="judul-weapon h-max overflow-y-hidden border-b-2 border-solid border-stone-500 py-5 lg:flex-auto">
+            <h1 data-aos="fade-up" class="pl-2 font-judul text-6xl font-bold text-textTerang dark:text-textGelap lg:text-[6.5rem]">CARI SENJATAMU.</h1>
           </div>
 
           <!-- ?form select -->
           <div id="form-select" class="relative z-10 mb-10 h-max lg:mb-20 lg:mt-32 lg:min-w-[400px] lg:flex-1">
-            <div id="category" class="border-campuran relative flex cursor-pointer items-center border-slate-600 shadow-lg">
-              <span class="senjata-active block p-5 font-subJudul text-lg font-semibold">SEMUA SENJATA</span>
+            <div id="category" class="border-campuran relative flex cursor-pointer items-center overflow-y-hidden border-slate-600 shadow-lg">
+              <span data-aos="fade-down" class="senjata-active block p-5 font-subJudul text-lg font-semibold text-textTerang dark:text-textGelap">SEMUA SENJATA</span>
               <img id="img-select" class="absolute right-0 block h-14 transition-all" src="../components/icon/down-arrow.png" alt="" />
             </div>
 

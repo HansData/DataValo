@@ -17,43 +17,46 @@
     <title>author</title>
   </head>
   <body class="mx-auto min-w-[300px] max-w-[1500px]">
-    <main id="author-main" class="pt-[100px]">
+    <main id="author-main" class="relative bg-bgTerang pt-[100px] dark:bg-bgGelap">
       <!-- ?############# -->
       <section class="px-[5%] pb-28 lg:flex lg:items-center lg:justify-center lg:px-[10%] lg:pb-60">
         <article class="lg:flex-1">
-          <h1 class="relative z-10 font-subJudul text-4xl font-medium lg:text-5xl">Hai semua, saya</h1>
+          <h1 data-aos="fade-up" class="relative z-10 font-subJudul text-4xl font-medium text-textTerang dark:text-textGelap lg:text-5xl">Hai semua, saya</h1>
 
-          <h1 class="mb-2 font-subJudul text-4xl font-semibold lg:mb-3 lg:text-5xl">
+          <h1 data-aos="fade-left" class="mb-2 font-subJudul text-4xl font-semibold lg:mb-3 lg:text-5xl">
             <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">
               <span class="relative text-white"> Ahmad Raihan</span>
             </span>
           </h1>
 
-          <h3 class="text-2xl font-medium lg:mb-1 lg:text-3xl">Dan saya <span class="font-bold text-stone-700"> Seorang</span></h3>
+          <h3 data-aos="fade-up" class="lg:text-3x text-2xl font-medium text-textTerang dark:text-textGelap lg:mb-1">Dan saya <span class="font-bold text-green-400"> Seorang</span></h3>
 
-          <div class="mb-5 flex flex-row font-judul text-4xl font-semibold text-violet-600 lg:text-5xl">
+          <div data-aos="fade-left" class="mb-5 flex flex-row font-judul text-4xl font-semibold text-violet-600 lg:text-5xl">
             <h3 id="autoType" class="font-judul tracking-wider"></h3>
           </div>
 
-          <p class="max-w-[600px] font-isi">
+          <p data-aos="fade-up" class="max-w-[600px] font-isi text-textTerang dark:text-textGelap">
             Saya hanya manusia yang tertarik dengan dunia pemograman terutama web developer dan sedang tahap belajar agar impian saya bisa tercapai. Belajar pemograman mudah dan menyenagkan
-            <span class="text-lg text-slate-700">BUKAN????</span>
+            <span class="text-lg text-red-500">BUKAN????</span>
           </p>
 
           <a>
-            <button type="button" class="relative mb-5 mt-3 rounded-[15px] bg-pink-500 p-3 px-6 font-subJudul text-textTerang shadow-md shadow-slate-800 hover:bg-pink-400 hover:text-slate-200 active:shadow-sm active:shadow-slate-400">
+            <button
+              data-aos="fade-down"
+              type="button"
+              class="relative mb-5 mt-3 rounded-[15px] bg-pink-500 p-3 px-6 font-subJudul text-textTerang shadow-md shadow-slate-800 hover:bg-pink-400 hover:text-slate-200 active:shadow-sm active:shadow-slate-400 dark:shadow-slate-400">
               Hubungi Saya
               <span class="absolute right-0 top-0 -mr-1.5 -mt-1.5 h-5 w-5 animate-ping rounded-full bg-green-400 text-xs"></span>
               <span class="absolute right-0 top-0 -mr-1 -mt-1 flex h-4 w-4 items-center justify-center rounded-full bg-green-400 text-xs text-white">1</span>
             </button>
           </a>
         </article>
-        <figure class="mt-10 lg:mt-0 lg:w-[400px] lg:p-10">
-          <div class="relative mx-auto flex items-center justify-center">
-            <div class="mx-auto max-w-[350px]">
-              <img class="block w-full" src="../components/image/foto-pribadiku-removebg-preview.png" alt="" />
+        <figure data-aos="zoom-in" data-aos-offset="100" class="mt-10 lg:mt-0 lg:w-[400px] lg:p-10">
+          <div class="relative mx-auto flex translate-y-0 items-center justify-center">
+            <div class="animasi-naik-turun mx-auto max-w-[350px]">
+              <img class="relative z-10 block w-full" src="../components/image/foto-pribadiku-removebg-preview.png" alt="" />
             </div>
-            <span class="absolute bottom-0 -z-10 mx-auto block w-full scale-[1.1] sm:w-[450px]">
+            <span class="animasi-naik-turun-bg absolute bottom-0 mx-auto block w-full scale-[1.1] sm:w-[450px]">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#FF0066"
@@ -66,22 +69,22 @@
       </section>
 
       <!-- !################################ -->
-      <div class="relative bg-neutral-400">
+      <div class="relative bg-neutral-400 dark:bg-slate-900">
         <section class="top-0 my-10 flex w-full items-center lg:absolute lg:-mt-[120px] lg:h-60">
-          <div class="mx-auto flex w-full flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-100 bg-neutral-800 p-3 py-10 lg:w-4/5 lg:rounded-2xl">
-            <h1 class="font-judul text-4xl font-bold text-white">Teknologi Yang Dipakai</h1>
-            <p class="text-slate-200">Web ini dibuat pada bulan Juli 2023 dengan menggunakan teknologi :</p>
+          <div class="dark:shadow-tecno mx-auto flex w-full flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-100 bg-neutral-800 p-3 py-10 lg:w-4/5 lg:rounded-2xl">
+            <h1 data-aos="fade-up" class="font-judul text-4xl font-bold text-white">Teknologi Yang Dipakai</h1>
+            <p data-aos="fade-down" class="text-slate-200">Web ini dibuat pada bulan Juli 2023 dengan menggunakan teknologi :</p>
             <ul class="flex w-full flex-wrap items-center justify-center gap-4">
-              <li class="icon-tools bingkai-gradasi">
+              <li data-aos="flip-left" class="icon-tools bingkai-gradasi">
                 <img class="block rounded-md bg-slate-300 p-2" src="../components/icon/html5.png" alt="html 5" />
               </li>
-              <li class="icon-tools bingkai-gradasi">
+              <li data-aos="flip-right" class="icon-tools bingkai-gradasi">
                 <img class="block rounded-md bg-slate-300 p-2" src="../components/icon/sass.png" alt="sass" />
               </li>
-              <li class="icon-tools bingkai-gradasi">
+              <li data-aos="flip-left" class="icon-tools bingkai-gradasi">
                 <img class="block rounded-md bg-slate-300 p-2" src="../components/icon/tailwindcss.png" alt="tailwindcss" />
               </li>
-              <li class="icon-tools bingkai-gradasi">
+              <li data-aos="flip-right" class="icon-tools bingkai-gradasi">
                 <img class="block rounded-md bg-slate-300 p-2" src="../components/icon/jquery.png" alt="jquery" />
               </li>
             </ul>
@@ -90,13 +93,16 @@
 
         <!-- !######################### -->
         <section class="px-[5%] py-20 lg:flex lg:items-center lg:justify-center lg:px-[10%] lg:pt-60">
-          <div class="mx-auto mb-10 mt-10 w-[50vw] lg:mr-5 lg:w-[300px] lg:p-10">
-            <img class="mx-auto block w-full animate-pulse rounded-full border-4 border-solid border-slate-600 bg-sky-200 shadow-lg shadow-stone-500" src="../components/background/undraw_drink_coffee_v3au.svg" alt="" />
+          <div data-aos="fade-up" class="mx-auto mb-10 mt-10 w-[50vw] lg:mr-5 lg:w-[300px] lg:p-10">
+            <img
+              class="mx-auto block w-full animate-pulse rounded-full border-4 border-solid border-slate-600 bg-sky-200 shadow-lg shadow-stone-500 dark:shadow-slate-500"
+              src="../components/background/undraw_drink_coffee_v3au.svg"
+              alt="" />
           </div>
 
-          <div class="h-max rounded-lg border-2 border-solid border-gray-300 bg-slate-200 p-5 py-10 shadow-lg lg:flex-1">
-            <h1 class="mb-5 font-judul text-4xl font-bold">About Me</h1>
-            <p>
+          <div class="h-max overflow-x-hidden rounded-lg border-2 border-solid border-gray-300 bg-slate-200 p-5 py-10 shadow-lg dark:bg-slate-200/50 dark:shadow-slate-500 lg:flex-1">
+            <h1 data-aos="fade-right" class="mb-5 font-judul text-4xl font-bold text-textTerang dark:text-textGelap">About Me</h1>
+            <p data-aos="fade-up" class="text-textTerang dark:text-textGelap">
               Hai, nama saya Ahmad Raihan dan saya adalah pemula yang sedang belajar pemograman terutama di bilang web developer, saya telah belajar web programing sekitar 6 bulan secara otodidak dan teknologi yang saya kuasai masih sangat
               sedikit tetapi saya tetap semangat untuk terus belajar karena ada pepatah china berkata : <span class="font-semibold tracking-wide">"我认为如果你有钱你就有权力，但对我来说没有"</span> artinya<span id="bacaLengkap"
                 >... <u class="cursor-pointer text-sky-500 hover:text-sky-300">Baca Selengkapnya.</u></span
