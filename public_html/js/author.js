@@ -1,14 +1,14 @@
 if (localStorage.halaman === 'author') {
     $(".servis").removeClass("active");
     $("#author").addClass("active");
-    $('#header-container').load("author.html #author-main", function () {
+    $('#header-container').load("./public_html/author.html #author-main", function () {
         getHalamanAuthor()
     });
 }
 
 
 $('#author').click(() => {
-    $('#header-container').load("author.html #author-main", function () {
+    $('#header-container').load("./public_html/author.html #author-main", function () {
         getHalamanAuthor()
         localStorage.halaman = 'author'
     })

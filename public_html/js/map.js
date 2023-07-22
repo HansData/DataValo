@@ -1,13 +1,13 @@
 if (localStorage.halaman === 'map') {
     $(".servis").removeClass("active");
     $("#map").addClass("active");
-    $('#header-container').load("map.html #main-map", function () {
+    $('#header-container').load("./public_html/map.html #main-map", function () {
         getHalamanMap()
     });
 }
 
 $('#map').click(() => {
-    $('#header-container').load("map.html #main-map", function () {
+    $('#header-container').load("./public_html/map.html #main-map", function () {
         getHalamanMap()
         localStorage.halaman = 'map'
     });

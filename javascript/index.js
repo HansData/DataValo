@@ -5,7 +5,7 @@
 if (localStorage.halaman === 'profil') {
   $(".servis").removeClass("active");
   $("#profil").addClass("active");
-  $('#header-container').load("../public_html/profil.html #main-about", function () {
+  $('#header-container').load("./public_html/profil.html #main-about", function () {
     getJsProfil()
 
   });
@@ -14,7 +14,7 @@ if (localStorage.halaman === 'profil') {
 
 // ?#### ketika navbarnya diclick
 $('#profil').click(() => {
-  $('#header-container').load("../public_html/profil.html #main-about", function () {
+  $('#header-container').load("./public_html/profil.html #main-about", function () {
     getJsProfil()
     localStorage.halaman = 'profil'
   });

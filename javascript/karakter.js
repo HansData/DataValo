@@ -1,13 +1,13 @@
 if (localStorage.halaman === 'character') {
     $(".servis").removeClass("active");
     $("#character").addClass("active");
-    $('#header-container').load("../public_html/character.html #main-character", function () {
+    $('#header-container').load("./public_html/character.html #main-character", function () {
         getHalamanCharacter()
     });
 }
 
 $('#character').click(() => {
-    $('#header-container').load("../public_html/character.html #main-character", function () {
+    $('#header-container').load("./public_html/character.html #main-character", function () {
 
         getHalamanCharacter()
         localStorage.halaman = 'character'

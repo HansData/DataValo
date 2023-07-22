@@ -2,25 +2,22 @@
 if (localStorage.halaman === 'weapon') {
   $(".servis").removeClass("active");
   $("#weapon").addClass("active");
-  $('#header-container').load("weapon.html #main-weapon", function () {
+  $('#header-container').load("./public_html/weapon.html", function () {
     getHalamanWeapon()
   });
 }
 
 
 $('#weapon').click(() => {
-  $('#header-container').load("weapon.html #main-weapon", function () {
+  $('#header-container').load("./public_html/weapon.html #main-weapon", function () {
     getHalamanWeapon()
     localStorage.halaman = 'weapon'
   })
 });
 
-
 // !########################## bagian start
 
 function getHalamanWeapon() {
-
-
 
   $(window).ready(function () {
 
@@ -110,7 +107,7 @@ function getHalamanWeapon() {
   // ? ############################### pengambilan json pertama
 
   function getWeapon() {
-    $.getJSON('../json/imageSenjata.json', result => {
+    $.getJSON('../../json/imageSenjata.json', result => {
       const dataSenjata = result.senjata;
       $.each(dataSenjata, (index, elemen) => {
 
@@ -140,7 +137,7 @@ function getHalamanWeapon() {
     }
 
 
-    $.getJSON('../json/imageSenjata.json', result => {
+    $.getJSON('../../json/imageSenjata.json', result => {
       const dataSenjata = result.senjata;
       const jenisSenjata = [];
 
