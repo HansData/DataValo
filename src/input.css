@@ -80,7 +80,7 @@
   }
 
   .navigasi-slide-map {
-    @apply mr-1 h-1.5 w-4 border border-solid border-gray-500 lg:h-2 lg:w-6;
+    @apply mr-1 h-1.5 w-4 cursor-pointer border border-solid border-gray-500 lg:h-2 lg:w-6;
   }
 
   .arrow-slide-map {

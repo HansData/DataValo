@@ -6,25 +6,30 @@ import { getHalamanAuthor } from "../public_html/js/author.js";
 import getSvg from "./getSvg.mjs";
 
 
-// ? ketika halaman di load ulang
-const namaHalaman = localStorage.halaman;
-if (localStorage.halaman !== undefined) {
-  $('#header-container').load(`./public_html/${namaHalaman}.html #main-${namaHalaman}`, function () {
+function getHalamanSetting(halaman) {
+  return $('#header-container').load(`./public_html/${halaman}.html #main-${halaman}`, function () {
     $(".servis").removeClass("active");
-    $(`#${namaHalaman}`).addClass("active");
-    if (namaHalaman === "profil") {
+    $(`#${halaman}`).addClass("active");
+    if (halaman === "profil") {
       getHalamanProfil()
-    } else if (namaHalaman === "character") {
+    } else if (halaman === "character") {
       getHalamanCharacter()
-    } else if (namaHalaman === "weapon") {
+    } else if (halaman === "weapon") {
       getHalamanWeapon()
-    } else if (namaHalaman === "map") {
+    } else if (halaman === "map") {
       getHalamanMap()
-    } else if (namaHalaman === "author") {
+    } else if (halaman === "author") {
       getHalamanAuthor()
     }
 
   })
+}
+
+// ? ketika halaman di load ulang
+const namaHalaman = localStorage.halaman;
+if (localStorage.halaman !== undefined) {
+
+  getHalamanSetting(namaHalaman)
 }
 
 
@@ -34,19 +39,8 @@ $('.ul-servis').on('click', '.servis', function () {
   const idServis = $($(this)).attr('id');
   localStorage.halaman = idServis;
 
-  $('#header-container').load(`./public_html/${idServis}.html #main-${idServis}`, function () {
-    if (idServis === "profil") {
-      getHalamanProfil()
-    } else if (idServis === "character") {
-      getHalamanCharacter()
-    } else if (idServis === "weapon") {
-      getHalamanWeapon()
-    } else if (idServis === "map") {
-      getHalamanMap()
-    } else if (idServis === "author") {
-      getHalamanAuthor()
-    }
-  })
+  getHalamanSetting(idServis)
+
 })
 
 // ?######### configrasi animasi scroll
