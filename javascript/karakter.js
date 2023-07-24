@@ -1,21 +1,7 @@
-if (localStorage.halaman === 'character') {
-    $(".servis").removeClass("active");
-    $("#character").addClass("active");
-    $('#header-container').load("./public_html/character.html #main-character", function () {
-        getHalamanCharacter()
-    });
-}
 
-$('#character').click(() => {
-    $('#header-container').load("./public_html/character.html #main-character", function () {
-
-        getHalamanCharacter()
-        localStorage.halaman = 'character'
-    })
-})
 // ! mengambil data dari valorant API
 
-function getHalamanCharacter() {
+export function getHalamanCharacter() {
 
     // ? function setingan slide slick
     function lebarLayar() {
